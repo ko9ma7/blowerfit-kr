@@ -1,0 +1,267 @@
+{
+  "schema_version": "1.0",
+  "canonical_blower_types": {
+    "ring_blower": {
+      "ko": [
+        "링블로워",
+        "링 블로워",
+        "재생블로워",
+        "재생식 블로워"
+      ],
+      "en": [
+        "ring blower",
+        "regenerative blower",
+        "side channel blower",
+        "side-channel blower"
+      ],
+      "note": "시장에서는 혼용되지만 제조사에 따라 side-channel/regenerative의 구조·단수·성능표기 방식이 다를 수 있어 원 제조사 용어도 보존"
+    },
+    "roots_pd_blower": {
+      "ko": [
+        "루츠블로워",
+        "루츠 블로워",
+        "로터리 블로워",
+        "용적식 블로워"
+      ],
+      "en": [
+        "roots blower",
+        "PD blower",
+        "positive displacement blower",
+        "rotary lobe blower"
+      ],
+      "note": "로브 수와 패키지 구성에 따라 성능/맥동 차이"
+    },
+    "turbo_blower": {
+      "ko": [
+        "터보블로워",
+        "터보 블로워",
+        "고속터보블로워"
+      ],
+      "en": [
+        "turbo blower",
+        "high speed turbo blower",
+        "centrifugal turbo blower"
+      ],
+      "note": "에어베어링/자기베어링/기어증속 등 세부 방식 분리 필요"
+    },
+    "centrifugal_blower": {
+      "ko": [
+        "원심블로워",
+        "원심 송풍기"
+      ],
+      "en": [
+        "centrifugal blower",
+        "multistage centrifugal blower"
+      ],
+      "note": "저~중압 대유량 계열"
+    },
+    "screw_blower": {
+      "ko": [
+        "스크류블로워",
+        "스크류 블로워"
+      ],
+      "en": [
+        "screw blower",
+        "rotary screw blower"
+      ],
+      "note": "저압 압축공기/폭기용"
+    },
+    "package_blower": {
+      "ko": [
+        "패키지블로워",
+        "방음블로워"
+      ],
+      "en": [
+        "package blower",
+        "silent blower"
+      ],
+      "note": "블로워 본체+방음/필터/밸브 등의 패키지"
+    }
+  },
+  "applications": [
+    {
+      "slug": "plating",
+      "name_ko": "도금/표면처리",
+      "name_en": "Plating & surface treatment",
+      "typical_notes": "도금조 폭기, 세척 후 액 제거, R2R 라인"
+    },
+    {
+      "slug": "air_knife",
+      "name_ko": "에어나이프/블로오프",
+      "name_en": "Air knife / blow-off",
+      "typical_notes": "노즐/슬롯과 P-Q 운전점 동시 검토"
+    },
+    {
+      "slug": "drying",
+      "name_ko": "건조",
+      "name_en": "Drying",
+      "typical_notes": "세척 후 수분/용액 제거"
+    },
+    {
+      "slug": "wash_drying",
+      "name_ko": "세척 후 건조",
+      "name_en": "Post-wash drying",
+      "typical_notes": "클린 에어와 미스트 관리 중요"
+    },
+    {
+      "slug": "tank_aeration",
+      "name_ko": "조 폭기/교반",
+      "name_en": "Tank aeration",
+      "typical_notes": "도금조/수조"
+    },
+    {
+      "slug": "wastewater",
+      "name_ko": "폐수처리 폭기",
+      "name_en": "Wastewater aeration",
+      "typical_notes": "대유량 터보·PD·스크류 적용"
+    },
+    {
+      "slug": "aquaculture",
+      "name_ko": "양식장 폭기",
+      "name_en": "Aquaculture aeration",
+      "typical_notes": "연속운전 신뢰성 중요"
+    },
+    {
+      "slug": "pneumatic_conveying",
+      "name_ko": "공압이송",
+      "name_en": "Pneumatic conveying",
+      "typical_notes": "차압과 가스/분체 특성 검토"
+    },
+    {
+      "slug": "vacuum",
+      "name_ko": "진공/흡입",
+      "name_en": "Vacuum / suction",
+      "typical_notes": "진공도와 흡입 유량 곡선 검토"
+    },
+    {
+      "slug": "vacuum_lifting",
+      "name_ko": "진공리프팅",
+      "name_en": "Vacuum lifting",
+      "typical_notes": "누설량과 안전율 고려"
+    },
+    {
+      "slug": "fermentation",
+      "name_ko": "발효",
+      "name_en": "Fermentation",
+      "typical_notes": "청정/무급유 공기"
+    },
+    {
+      "slug": "combustion_air",
+      "name_ko": "연소공기",
+      "name_en": "Combustion air",
+      "typical_notes": "연속운전·제어성"
+    },
+    {
+      "slug": "process_air",
+      "name_ko": "공정공기",
+      "name_en": "Process air",
+      "typical_notes": "압력·유량 안정성"
+    },
+    {
+      "slug": "semiconductor",
+      "name_ko": "반도체/전자",
+      "name_en": "Semiconductor/electronics",
+      "typical_notes": "청정도·오일프리"
+    },
+    {
+      "slug": "battery",
+      "name_ko": "배터리",
+      "name_en": "Battery manufacturing",
+      "typical_notes": "건조/이송/공정공기"
+    },
+    {
+      "slug": "film_web",
+      "name_ko": "필름/웹 공정",
+      "name_en": "Film/web process",
+      "typical_notes": "에어나이프·건조·장력 영향"
+    }
+  ],
+  "facets": [
+    "blower_type",
+    "application",
+    "manufacturer",
+    "brand",
+    "country",
+    "korea_class",
+    "motor_kw",
+    "motor_hp",
+    "max_airflow_m3_min",
+    "discharge_pressure_kpa",
+    "vacuum_kpa",
+    "frequency_hz",
+    "voltage_v",
+    "phase",
+    "oil_free",
+    "sound_dba",
+    "efficiency_class",
+    "vfd_compatible",
+    "weight_kg",
+    "purchase_status",
+    "supplier_region",
+    "data_quality"
+  ],
+  "unit_normalization": {
+    "airflow": {
+      "canonical": "m3/min",
+      "supported": [
+        "m3/min",
+        "m3/h",
+        "L/min",
+        "L/s",
+        "cfm",
+        "Nm3/min",
+        "Nm3/h"
+      ],
+      "rules": [
+        "표준상태 유량(Nm³/*)과 실제 체적유량(m³/*)을 동일 취급하지 않음"
+      ]
+    },
+    "pressure": {
+      "canonical": "kPa(g_or_diff)",
+      "supported": [
+        "kPa",
+        "mbar",
+        "bar",
+        "mmAq",
+        "mmH2O",
+        "inH2O",
+        "psi"
+      ],
+      "conversion": {
+        "1_mmAq_kPa": 0.00980665,
+        "1_mbar_kPa": 0.1,
+        "1_bar_kPa": 100.0,
+        "1_psi_kPa": 6.894757
+      }
+    },
+    "power": {
+      "canonical": "kW",
+      "supported": [
+        "kW",
+        "HP"
+      ],
+      "conversion": {
+        "1_kW_mechanical_HP": 1.34102209
+      }
+    }
+  },
+  "data_quality_order": [
+    "certified_test",
+    "official_current_catalog",
+    "official_current_web",
+    "official_legacy_catalog",
+    "uploaded_catalog",
+    "authorized_distributor",
+    "secondary_profile",
+    "marketplace",
+    "curve_digitized_approx",
+    "unverified"
+  ],
+  "selection_logic": {
+    "stage_1_endpoint_prefilter": "max_airflow >= required_flow AND max_pressure >= required_pressure 는 필요조건일 뿐 충분조건이 아님",
+    "stage_2_pq_check": "P-Q 점 데이터가 있으면 required_pressure에서 보간한 실제 유량으로 합격 여부 판단",
+    "stage_3_curve_missing": "성능곡선이 없으면 needs_curve_verification=true",
+    "stage_4_procurement": "Korea supplier / service / quote availability로 조달 필터",
+    "stage_5_rfq": "최종 발주 전 동일 주파수·전압·흡입조건의 공식 duty sheet 또는 certified curve 요청"
+  }
+}

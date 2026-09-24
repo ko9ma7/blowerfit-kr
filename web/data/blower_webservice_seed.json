@@ -1,0 +1,5908 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-09-24",
+  "purpose": "블로워 검색→기술선정→비교→한국 공급처/RFQ 연결을 위한 웹서비스 초기 데이터셋",
+  "current_model_variant_count": 80,
+  "manufacturer_count": 22,
+  "supplier_count": 14,
+  "important_data_policy": [
+    "모델 사양이 없는 브랜드는 manufacturer/series 수준으로만 저장하며 가짜 모델을 생성하지 않는다.",
+    "최대풍량과 최대압력은 동시에 달성되는 duty point로 취급하지 않는다.",
+    "P-Q 곡선이 없는 모델은 최종 추천 상태를 needs_curve_verification으로 둔다.",
+    "가격/납기는 공개 검증값이 없으면 null + RFQ_required로 유지한다.",
+    "구형 자료는 legacy로 보존하고 현행 제품과 분리한다."
+  ],
+  "manufacturers": [
+    {
+      "name": "Hwanghae Electric / 황해전기",
+      "brand_names": [
+        "HRB",
+        "MINI"
+      ],
+      "country": "Korea",
+      "korea_class": "domestic_manufacturer",
+      "website": "https://www.hhblower.co.kr/",
+      "product_types": [
+        "ring_blower",
+        "high_speed_mini_ring_blower"
+      ],
+      "strengths_ko": [
+        "국내 제조 및 직접 기술대응",
+        "50/60Hz 링블로워 라인업",
+        "IE3 MP 시리즈",
+        "성능곡선 제공"
+      ],
+      "purchase_status": "manufacturer_direct_verified",
+      "contact": {
+        "phone": "1577-2673 / 032-817-2671~3",
+        "email": "webmaster@hhblower.co.kr",
+        "region": "인천"
+      },
+      "coverage_level": "model_verified",
+      "source_url": "https://hhblower.co.kr/product/ring_blower/summary.php",
+      "id": "mfr_a3b6899056e8",
+      "verified_at": "2026-09-24"
+    },
+    {
+      "name": "DAEHA ENG Co., Ltd. / 대하이엔지",
+      "brand_names": [
+        "DHB"
+      ],
+      "country": "Korea",
+      "korea_class": "domestic_manufacturer",
+      "website": "https://turboair.net/",
+      "product_types": [
+        "ring_blower",
+        "turbo_blower"
+      ],
+      "strengths_ko": [
+        "국내 링블로워 제조/공급",
+        "다양한 1·2단 모델",
+        "선정용 P-Q 자료",
+        "국내 직접 견적"
+      ],
+      "purchase_status": "manufacturer_direct_verified",
+      "contact": {
+        "phone": "031-985-5985",
+        "email": "dhb@turboair.net",
+        "region": "경기 김포"
+      },
+      "coverage_level": "model_verified",
+      "source_url": "https://turboair.net/shopinfo/location.html",
+      "id": "mfr_423d222e2a73",
+      "verified_at": "2026-09-24"
+    },
+    {
+      "name": "INHA Electric / 인하전기",
+      "brand_names": [
+        "IHB"
+      ],
+      "country": "Korea",
+      "korea_class": "domestic_brand",
+      "website": "http://inhablower.co.kr/",
+      "product_types": [
+        "ring_blower"
+      ],
+      "strengths_ko": [
+        "고압형 2단 링블로워 비교 후보",
+        "국내 조달 가능"
+      ],
+      "purchase_status": "korea_supplier_known_unverified_official_status",
+      "contact": {
+        "phone": "031-520-2138",
+        "email": "inhablower@daum.net",
+        "region": "경기 시흥"
+      },
+      "coverage_level": "model_verified_user_source",
+      "source_url": "http://inhablower.co.kr/",
+      "id": "mfr_b23d459917a2",
+      "verified_at": "2026-09-24"
+    },
+    {
+      "name": "세종씨아이",
+      "brand_names": [
+        "SEJONG CI",
+        "MINI"
+      ],
+      "country": "Korea",
+      "korea_class": "domestic_manufacturer",
+      "website": "https://www.sejongci.com/",
+      "product_types": [
+        "ring_blower",
+        "high_speed_mini_ring_blower",
+        "custom_ring_blower"
+      ],
+      "strengths_ko": [
+        "일반·특수제작 링블로워",
+        "벨트/커플링/버티컬/고온형 주문제작",
+        "소형고속 블로워 사양 공개"
+      ],
+      "purchase_status": "manufacturer_direct_verified",
+      "contact": {
+        "phone": "031-876-7780",
+        "email": "jhpark@sejongci.com",
+        "region": "경기 양주"
+      },
+      "coverage_level": "series_verified",
+      "source_url": "https://www.sejongci.com/CUSTROMRINGBLOWERS",
+      "id": "mfr_a59c672e4083",
+      "verified_at": "2026-09-24"
+    },
+    {
+      "name": "TNE / 티앤이",
+      "brand_names": [
+        "TNE"
+      ],
+      "country": "Korea",
+      "korea_class": "domestic_manufacturer",
+      "website": "https://www.tnekorea.com/",
+      "product_types": [
+        "air_bearing_turbo_blower",
+        "magnetic_bearing_turbo_blower",
+        "turbo_compressor"
+      ],
+      "strengths_ko": [
+        "국산 고속 터보기계",
+        "공기베어링·자기베어링",
+        "VFD 기반 정유량/정압 제어",
+        "성능시험 성적서 대응"
+      ],
+      "purchase_status": "manufacturer_direct_verified",
+      "contact": {
+        "phone": "043-900-9982",
+        "email": "domestic@tnekorea.co.kr",
+        "region": "충북 청주 오송"
+      },
+      "coverage_level": "series_verified",
+      "source_url": "https://www.tnekorea.com/turboblower",
+      "id": "mfr_1c2eca50a004",
+      "verified_at": "2026-09-24"
+    },
+    {
+      "name": "한국유체기계",
+      "brand_names": [
+        "KFM"
+      ],
+      "country": "Korea",
+      "korea_class": "domestic_manufacturer",
+      "website": "https://www.kfmblower.kr/",
+      "product_types": [
+        "roots_blower",
+        "turbo_blower"
+      ],
+      "strengths_ko": [
+        "루츠/로터리 블로워와 터보 블로워 취급",
+        "국내 현장 대응"
+      ],
+      "purchase_status": "manufacturer_direct_verified",
+      "contact": {
+        "phone": "051-264-3370",
+        "email": "chlee4080@hanmail.net",
+        "region": "부산"
+      },
+      "coverage_level": "family_verified",
+      "source_url": "https://kfmblower.kr/g5/sub/product_01.php",
+      "id": "mfr_37151488c13c",
+      "verified_at": "2026-09-24"
+    },
+    {
+      "name": "Namwon Turbo One / 남원터보원",
+      "brand_names": [
+        "NWTB",
+        "Turbo One"
+      ],
+      "country": "Korea",
+      "korea_class": "domestic_manufacturer",
+      "website": "http://www.nwturbo.com/",
+      "product_types": [
+        "air_bearing_turbo_blower",
+        "turbo_compressor"
+      ],
+      "strengths_ko": [
+        "에어포일 베어링",
+        "PMSM+VFD",
+        "무급유·저진동",
+        "터보블로워/컴프레서"
+      ],
+      "purchase_status": "manufacturer_direct_verified_secondary_profile",
+      "contact": {
+        "phone": "+82-62-225-9181",
+        "email": "nwturboone@hanmail.net",
+        "region": "전남/광주권"
+      },
+      "coverage_level": "series_verified",
+      "source_url": "https://nwturbo.gobizkorea.com/mini/site/miniSiteMain.do?domn_id=nwturbo",
+      "id": "mfr_9a7e2e4f5a3f",
+      "verified_at": "2026-09-24"
+    },
+    {
+      "name": "NS / 앤에스 (Neuros 계열/브랜드 자료 포함)",
+      "brand_names": [
+        "NS",
+        "Neuros"
+      ],
+      "country": "Korea",
+      "korea_class": "domestic_manufacturer",
+      "website": "https://www.nskor.com/",
+      "product_types": [
+        "air_bearing_turbo_blower",
+        "magnetic_bearing_turbo_blower",
+        "side_channel_blower",
+        "centrifugal_blower"
+      ],
+      "strengths_ko": [
+        "고속 터보기계 기반",
+        "공기베어링/자기베어링",
+        "NX/NC/NXM 계열 자료 존재",
+        "도금·에어나이프 응용 자료 존재"
+      ],
+      "purchase_status": "manufacturer_direct_verified",
+      "contact": {
+        "phone": "+82-42-865-7300",
+        "email": "sales@nskor.com",
+        "region": "대전"
+      },
+      "coverage_level": "series_verified",
+      "source_url": "https://www.nskor.com/ns/company/contact-us",
+      "id": "mfr_b8aeb27d77bd",
+      "verified_at": "2026-09-24"
+    },
+    {
+      "name": "TurboMAX Co., Ltd.",
+      "brand_names": [
+        "TurboMAX"
+      ],
+      "country": "Korea",
+      "korea_class": "domestic_manufacturer",
+      "website": "http://www.turbomax.co.kr/",
+      "product_types": [
+        "air_bearing_turbo_blower"
+      ],
+      "strengths_ko": [
+        "고속모터+에어베어링+원심압축기",
+        "무급유",
+        "저소음",
+        "폐수 폭기 중심"
+      ],
+      "purchase_status": "manufacturer_direct_evidence_official_brochure",
+      "contact": {
+        "phone": "+82-43-275-6002",
+        "email": null,
+        "region": "충북"
+      },
+      "coverage_level": "series_verified",
+      "source_url": "https://www.tkcneotech.com/wp-content/uploads/2022/12/TurboMAX-Brochure.pdf",
+      "id": "mfr_3c77dca0593d",
+      "verified_at": "2026-09-24"
+    },
+    {
+      "name": "K-TURBO",
+      "brand_names": [
+        "K-TURBO"
+      ],
+      "country": "Korea",
+      "korea_class": "domestic_manufacturer_brand",
+      "website": "https://www.k-turbo.com/",
+      "product_types": [
+        "air_bearing_turbo_blower",
+        "turbo_compressor"
+      ],
+      "strengths_ko": [
+        "에어베어링 터보블로워",
+        "HMI/원격제어/다중 병렬제어",
+        "한국 공장/서비스센터 자료"
+      ],
+      "purchase_status": "manufacturer_direct_evidence_official_pdf",
+      "contact": {
+        "phone": null,
+        "email": null,
+        "region": "Korea"
+      },
+      "coverage_level": "series_verified",
+      "source_url": "https://www.k-turbo.com/kr/Public/Home/all/img/1.pdf",
+      "id": "mfr_7ff2e3c4bc41",
+      "verified_at": "2026-09-24"
+    },
+    {
+      "name": "Aerzen Turbo Co., Ltd. / AERZEN",
+      "brand_names": [
+        "AERZEN"
+      ],
+      "country": "Germany/Korea",
+      "korea_class": "foreign_brand_korea_manufacturing",
+      "website": "https://www.aerzen.com/",
+      "product_types": [
+        "turbo_blower",
+        "roots_pd_blower",
+        "screw_blower"
+      ],
+      "strengths_ko": [
+        "PD·스크류·터보를 한 브랜드에서 비교 가능",
+        "오송 터보블로워 생산거점",
+        "한국 판매·서비스"
+      ],
+      "purchase_status": "official_korea_manufacturing_sales_verified",
+      "contact": {
+        "phone": "+82-43-238-6500",
+        "email": "sales@aerzen-turbo.com",
+        "region": "충북 청주 오송"
+      },
+      "coverage_level": "family_verified",
+      "source_url": "https://www.aerzen.com/company/worldwide/company-profile-aerzen-turbo",
+      "id": "mfr_86214db95c88",
+      "verified_at": "2026-09-24"
+    },
+    {
+      "name": "TOEI Co., Ltd. / 東栄株式会社",
+      "brand_names": [
+        "BESLA"
+      ],
+      "country": "Japan",
+      "korea_class": "foreign_manufacturer",
+      "website": "https://labinox.co.jp/",
+      "product_types": [
+        "package_blower",
+        "blower"
+      ],
+      "strengths_ko": [
+        "도금조 교반·세척후 건조 적용 이력",
+        "방음 패키지",
+        "고풍량 성격"
+      ],
+      "purchase_status": "manufacturer_direct_korea_distributor_not_verified",
+      "contact": {
+        "phone": null,
+        "email": null,
+        "region": "Japan"
+      },
+      "coverage_level": "model_verified",
+      "source_url": "https://labinox.co.jp/product/brower/item_brower/tbb.html",
+      "id": "mfr_338da55a71f1",
+      "verified_at": "2026-09-24"
+    },
+    {
+      "name": "Elektror airsystems GmbH",
+      "brand_names": [
+        "Elektror"
+      ],
+      "country": "Germany",
+      "korea_class": "foreign_manufacturer",
+      "website": "https://www.elektror.com/",
+      "product_types": [
+        "side_channel_blower",
+        "centrifugal_blower"
+      ],
+      "strengths_ko": [
+        "정교한 성능곡선",
+        "VFD 운전 자료",
+        "오일프리 side-channel",
+        "산업용 건조·도금조 폭기 응용"
+      ],
+      "purchase_status": "manufacturer_contact_required",
+      "contact": {
+        "phone": null,
+        "email": null,
+        "region": "Germany"
+      },
+      "coverage_level": "model_verified",
+      "source_url": "https://www.elektror.com/",
+      "id": "mfr_abee349ae82a",
+      "verified_at": "2026-09-24"
+    },
+    {
+      "name": "Busch Vacuum Solutions",
+      "brand_names": [
+        "SAMOS"
+      ],
+      "country": "Germany",
+      "korea_class": "foreign_brand_korea_office",
+      "website": "https://www.buschvacuum.com/kr/ko/",
+      "product_types": [
+        "side_channel_blower",
+        "vacuum_pump"
+      ],
+      "strengths_ko": [
+        "한국법인·서비스센터",
+        "압력/진공 side-channel",
+        "한국어 데이터시트"
+      ],
+      "purchase_status": "official_korea_office_verified",
+      "contact": {
+        "phone": "+82-31-645-2700",
+        "email": "busch@busch.co.kr",
+        "region": "경기 이천"
+      },
+      "coverage_level": "model_verified",
+      "source_url": "https://www.buschvacuum.com/kr/ko/company/busch-kr/",
+      "id": "mfr_d8b3a8535101",
+      "verified_at": "2026-09-24"
+    },
+    {
+      "name": "Elmo Rietschle",
+      "brand_names": [
+        "Elmo Rietschle",
+        "G-BH"
+      ],
+      "country": "Germany",
+      "korea_class": "foreign_manufacturer",
+      "website": "https://www.elmorietschle.com/ko-kr/",
+      "product_types": [
+        "side_channel_blower",
+        "vacuum_pump"
+      ],
+      "strengths_ko": [
+        "현행 G-BH1/BH2/BH7/BH100",
+        "20,000h 서비스 간격 자료",
+        "VFD 가변 성능"
+      ],
+      "purchase_status": "official_contact_form_verified",
+      "contact": {
+        "phone": null,
+        "email": null,
+        "region": "Global/Korea web"
+      },
+      "coverage_level": "legacy_and_current_series",
+      "source_url": "https://www.elmorietschle.com/ko-kr/products/",
+      "id": "mfr_66945d65e7d3",
+      "verified_at": "2026-09-24"
+    },
+    {
+      "name": "Atlas Copco",
+      "brand_names": [
+        "Atlas Copco"
+      ],
+      "country": "Sweden/Belgium",
+      "korea_class": "foreign_brand_korea_office",
+      "website": "https://www.atlascopco.com/ko-kr/",
+      "product_types": [
+        "rotary_screw_blower",
+        "lobe_blower",
+        "multistage_centrifugal_blower",
+        "turbo_blower"
+      ],
+      "strengths_ko": [
+        "저압 블로워 기술군 폭넓음",
+        "100% 무급유 라인업",
+        "VSD",
+        "전국 서비스 네트워크"
+      ],
+      "purchase_status": "official_korea_office_verified",
+      "contact": {
+        "phone": "+82-31-620-0600",
+        "email": "aga.korea@atlascopco.com",
+        "region": "경기 성남/전국"
+      },
+      "coverage_level": "model_and_family_verified",
+      "source_url": "https://www.atlascopco.com/ko-kr/compressors/products/air-blowers",
+      "id": "mfr_8c8d5c5a57c9",
+      "verified_at": "2026-09-24"
+    },
+    {
+      "name": "KAESER KOMPRESSOREN",
+      "brand_names": [
+        "KAESER"
+      ],
+      "country": "Germany",
+      "korea_class": "foreign_brand_korea_office",
+      "website": "https://kr.kaeser.com/",
+      "product_types": [
+        "roots_blower",
+        "screw_blower",
+        "turbo_blower"
+      ],
+      "strengths_ko": [
+        "한국법인",
+        "터보/로터리/스크류 저압 솔루션",
+        "air knife 적용자료",
+        "서비스 체계"
+      ],
+      "purchase_status": "official_korea_office_verified",
+      "contact": {
+        "phone": "+82-31-682-6384",
+        "email": "info.korea@kaeser.com",
+        "region": "경기 평택"
+      },
+      "coverage_level": "family_verified",
+      "source_url": "https://kr.kaeser.com/services/contact/locations/",
+      "id": "mfr_6775635143a5",
+      "verified_at": "2026-09-24"
+    },
+    {
+      "name": "Fuji Electric",
+      "brand_names": [
+        "Fuji Electric"
+      ],
+      "country": "Japan",
+      "korea_class": "foreign_brand_korea_office",
+      "website": "https://fujielectric.co.kr/",
+      "product_types": [
+        "regenerative_blower",
+        "centrifugal_blower",
+        "drives"
+      ],
+      "strengths_ko": [
+        "regenerative/2단 고압 계열 자료",
+        "한국 판매법인·판매점 네트워크",
+        "인버터 조달 연계"
+      ],
+      "purchase_status": "official_korea_office_verified",
+      "contact": {
+        "phone": "02-780-5011",
+        "email": null,
+        "region": "서울 여의도"
+      },
+      "coverage_level": "family_verified",
+      "source_url": "https://fujielectric.co.kr/",
+      "id": "mfr_a25efc885f85",
+      "verified_at": "2026-09-24"
+    },
+    {
+      "name": "Gardner Denver",
+      "brand_names": [
+        "Gardner Denver"
+      ],
+      "country": "USA",
+      "korea_class": "foreign_manufacturer",
+      "website": "https://www.gardnerdenver.com/ko-kr/",
+      "product_types": [
+        "pd_blower",
+        "blower_package",
+        "screw_blower"
+      ],
+      "strengths_ko": [
+        "PD/로브 패키지",
+        "고차압·폭기·이송 공정",
+        "글로벌 서비스"
+      ],
+      "purchase_status": "official_contact_form_verified",
+      "contact": {
+        "phone": null,
+        "email": null,
+        "region": "Global/Korea web"
+      },
+      "coverage_level": "family_verified",
+      "source_url": "https://www.gardnerdenver.com/ko-kr/contact/",
+      "id": "mfr_8f8850c0e786",
+      "verified_at": "2026-09-24"
+    },
+    {
+      "name": "ROOTS",
+      "brand_names": [
+        "ROOTS"
+      ],
+      "country": "USA",
+      "korea_class": "foreign_brand",
+      "website": "https://www.rootsblower.com/",
+      "product_types": [
+        "roots_pd_blower"
+      ],
+      "strengths_ko": [
+        "전통적인 PD/Roots blower",
+        "고차압·공압이송·폭기",
+        "URAI/RAM 계열"
+      ],
+      "purchase_status": "manufacturer_group_contact_required",
+      "contact": {
+        "phone": null,
+        "email": null,
+        "region": "Global"
+      },
+      "coverage_level": "family_verified",
+      "source_url": "https://www.rootsblower.com/",
+      "id": "mfr_5ca94b6f1d52",
+      "verified_at": "2026-09-24"
+    },
+    {
+      "name": "Siemens / elmo vacuum technology GmbH",
+      "brand_names": [
+        "ELMO-G"
+      ],
+      "country": "Germany",
+      "korea_class": "unknown_or_foreign",
+      "website": null,
+      "product_types": [
+        "side channel blower"
+      ],
+      "strengths_ko": [],
+      "purchase_status": "not_yet_researched",
+      "contact": {
+        "phone": null,
+        "email": null,
+        "region": null
+      },
+      "coverage_level": "model_verified_from_existing_master",
+      "source_url": null,
+      "id": "mfr_912d424afa22",
+      "verified_at": "2026-09-24"
+    },
+    {
+      "name": "Atlas Copco Airpower NV",
+      "brand_names": [
+        "Atlas Copco"
+      ],
+      "country": "Belgium",
+      "korea_class": "unknown_or_foreign",
+      "website": null,
+      "product_types": [
+        "oil-free magnetic bearing turbo blower"
+      ],
+      "strengths_ko": [],
+      "purchase_status": "not_yet_researched",
+      "contact": {
+        "phone": null,
+        "email": null,
+        "region": null
+      },
+      "coverage_level": "model_verified_from_existing_master",
+      "source_url": null,
+      "id": "mfr_c92faee0824c",
+      "verified_at": "2026-09-24"
+    }
+  ],
+  "models": [
+    {
+      "id": "mdl_b3eda3bf4586",
+      "manufacturer_id": "mfr_338da55a71f1",
+      "brand": "BESLA",
+      "series": "TBB Package Blower",
+      "model_name": "TBB-7500AK-SV",
+      "blower_type_raw": "package blower / centrifugal-regenerative style",
+      "stage": null,
+      "data_quality": "catalog_spec",
+      "legacy": false,
+      "source_document": "Besla_BlowerFilter_Catalog.pdf",
+      "application_tags": [
+        "air_blowoff",
+        "plating",
+        "wash_drying"
+      ]
+    },
+    {
+      "id": "mdl_a1551f777a4f",
+      "manufacturer_id": "mfr_b23d459917a2",
+      "brand": "IHB",
+      "series": "IHB Ring Blower",
+      "model_name": "IHB-1102",
+      "blower_type_raw": "ring blower",
+      "stage": 2,
+      "data_quality": "catalog_spec",
+      "legacy": false,
+      "source_document": "user supplied IHB performance/specification image",
+      "application_tags": [
+        "air_knife",
+        "blowoff"
+      ]
+    },
+    {
+      "id": "mdl_0f64df547635",
+      "manufacturer_id": "mfr_b23d459917a2",
+      "brand": "IHB",
+      "series": "IHB Ring Blower",
+      "model_name": "IHB-1202",
+      "blower_type_raw": "ring blower",
+      "stage": 2,
+      "data_quality": "catalog_spec",
+      "legacy": false,
+      "source_document": "user supplied IHB performance/specification image",
+      "application_tags": [
+        "air_knife",
+        "blowoff"
+      ]
+    },
+    {
+      "id": "mdl_fd718b91fafb",
+      "manufacturer_id": "mfr_a3b6899056e8",
+      "brand": "HRB",
+      "series": "HRB Ring Blower",
+      "model_name": "HRB-900MP",
+      "blower_type_raw": "ring blower",
+      "stage": 1,
+      "data_quality": "catalog_spec",
+      "legacy": false,
+      "source_document": "2023황해전기링블러거_카다로그_ 최종20230905.pdf",
+      "application_tags": [
+        "blowoff",
+        "pressure",
+        "vacuum"
+      ]
+    },
+    {
+      "id": "mdl_4987c4ada618",
+      "manufacturer_id": "mfr_a3b6899056e8",
+      "brand": "HRB",
+      "series": "HRB Ring Blower",
+      "model_name": "HRB-900",
+      "blower_type_raw": "ring blower",
+      "stage": 1,
+      "data_quality": "catalog_spec",
+      "legacy": false,
+      "source_document": "2023황해전기링블러거_카다로그_ 최종20230905.pdf",
+      "application_tags": [
+        "blowoff",
+        "pressure",
+        "vacuum"
+      ]
+    },
+    {
+      "id": "mdl_03bc07ac7069",
+      "manufacturer_id": "mfr_a3b6899056e8",
+      "brand": "HRB",
+      "series": "HRB Ring Blower",
+      "model_name": "HRB-1000MP",
+      "blower_type_raw": "ring blower",
+      "stage": 1,
+      "data_quality": "catalog_spec",
+      "legacy": false,
+      "source_document": "2023황해전기링블러거_카다로그_ 최종20230905.pdf",
+      "application_tags": [
+        "blowoff",
+        "pressure",
+        "vacuum"
+      ]
+    },
+    {
+      "id": "mdl_b03eb1c5e2b2",
+      "manufacturer_id": "mfr_a3b6899056e8",
+      "brand": "HRB",
+      "series": "HRB Ring Blower",
+      "model_name": "HRB-1000",
+      "blower_type_raw": "ring blower",
+      "stage": 1,
+      "data_quality": "catalog_spec",
+      "legacy": false,
+      "source_document": "2023황해전기링블러거_카다로그_ 최종20230905.pdf",
+      "application_tags": [
+        "blowoff",
+        "pressure",
+        "vacuum"
+      ]
+    },
+    {
+      "id": "mdl_1946f678139d",
+      "manufacturer_id": "mfr_a3b6899056e8",
+      "brand": "HRB",
+      "series": "HRB Ring Blower",
+      "model_name": "HRB-1110MP",
+      "blower_type_raw": "ring blower",
+      "stage": 1,
+      "data_quality": "catalog_spec",
+      "legacy": false,
+      "source_document": "2023황해전기링블러거_카다로그_ 최종20230905.pdf",
+      "application_tags": [
+        "blowoff",
+        "pressure",
+        "vacuum"
+      ]
+    },
+    {
+      "id": "mdl_325343cb359c",
+      "manufacturer_id": "mfr_a3b6899056e8",
+      "brand": "HRB",
+      "series": "HRB Ring Blower",
+      "model_name": "HRB-1110",
+      "blower_type_raw": "ring blower",
+      "stage": 1,
+      "data_quality": "catalog_spec",
+      "legacy": false,
+      "source_document": "2023황해전기링블러거_카다로그_ 최종20230905.pdf",
+      "application_tags": [
+        "blowoff",
+        "pressure",
+        "vacuum"
+      ]
+    },
+    {
+      "id": "mdl_593fe8bd0ec0",
+      "manufacturer_id": "mfr_a3b6899056e8",
+      "brand": "HRB",
+      "series": "HRB Ring Blower",
+      "model_name": "HRB-1100MP",
+      "blower_type_raw": "ring blower",
+      "stage": 1,
+      "data_quality": "catalog_spec",
+      "legacy": false,
+      "source_document": "2023황해전기링블러거_카다로그_ 최종20230905.pdf",
+      "application_tags": [
+        "blowoff",
+        "pressure",
+        "vacuum"
+      ]
+    },
+    {
+      "id": "mdl_a62144baf7ab",
+      "manufacturer_id": "mfr_a3b6899056e8",
+      "brand": "HRB",
+      "series": "HRB Ring Blower",
+      "model_name": "HRB-1100",
+      "blower_type_raw": "ring blower",
+      "stage": 1,
+      "data_quality": "catalog_spec",
+      "legacy": false,
+      "source_document": "2023황해전기링블러거_카다로그_ 최종20230905.pdf",
+      "application_tags": [
+        "blowoff",
+        "pressure",
+        "vacuum"
+      ]
+    },
+    {
+      "id": "mdl_8a35a719f9c1",
+      "manufacturer_id": "mfr_a3b6899056e8",
+      "brand": "HRB",
+      "series": "HRB Ring Blower",
+      "model_name": "HRB-1200MP",
+      "blower_type_raw": "ring blower",
+      "stage": 1,
+      "data_quality": "catalog_spec",
+      "legacy": false,
+      "source_document": "2023황해전기링블러거_카다로그_ 최종20230905.pdf",
+      "application_tags": [
+        "blowoff",
+        "pressure",
+        "vacuum"
+      ]
+    },
+    {
+      "id": "mdl_abd3524f42f0",
+      "manufacturer_id": "mfr_a3b6899056e8",
+      "brand": "HRB",
+      "series": "HRB Ring Blower",
+      "model_name": "HRB-1200",
+      "blower_type_raw": "ring blower",
+      "stage": 1,
+      "data_quality": "catalog_spec",
+      "legacy": false,
+      "source_document": "2023황해전기링블러거_카다로그_ 최종20230905.pdf",
+      "application_tags": [
+        "blowoff",
+        "pressure",
+        "vacuum"
+      ]
+    },
+    {
+      "id": "mdl_f8107898372d",
+      "manufacturer_id": "mfr_a3b6899056e8",
+      "brand": "HRB",
+      "series": "HRB Ring Blower",
+      "model_name": "HRB-1300MP",
+      "blower_type_raw": "ring blower",
+      "stage": 1,
+      "data_quality": "catalog_spec",
+      "legacy": false,
+      "source_document": "2023황해전기링블러거_카다로그_ 최종20230905.pdf",
+      "application_tags": [
+        "blowoff",
+        "pressure",
+        "vacuum"
+      ]
+    },
+    {
+      "id": "mdl_2aadda9846de",
+      "manufacturer_id": "mfr_a3b6899056e8",
+      "brand": "HRB",
+      "series": "HRB Ring Blower",
+      "model_name": "HRB-1300",
+      "blower_type_raw": "ring blower",
+      "stage": 1,
+      "data_quality": "catalog_spec",
+      "legacy": false,
+      "source_document": "2023황해전기링블러거_카다로그_ 최종20230905.pdf",
+      "application_tags": [
+        "blowoff",
+        "pressure",
+        "vacuum"
+      ]
+    },
+    {
+      "id": "mdl_52e3fa7c62c3",
+      "manufacturer_id": "mfr_a3b6899056e8",
+      "brand": "HRB",
+      "series": "HRB Ring Blower",
+      "model_name": "HRB-1002MP",
+      "blower_type_raw": "ring blower",
+      "stage": 2,
+      "data_quality": "catalog_spec",
+      "legacy": false,
+      "source_document": "2023황해전기링블러거_카다로그_ 최종20230905.pdf",
+      "application_tags": [
+        "blowoff",
+        "pressure",
+        "vacuum"
+      ]
+    },
+    {
+      "id": "mdl_6958fd1b7149",
+      "manufacturer_id": "mfr_a3b6899056e8",
+      "brand": "HRB",
+      "series": "HRB Ring Blower",
+      "model_name": "HRB-1002",
+      "blower_type_raw": "ring blower",
+      "stage": 2,
+      "data_quality": "catalog_spec",
+      "legacy": false,
+      "source_document": "2023황해전기링블러거_카다로그_ 최종20230905.pdf",
+      "application_tags": [
+        "blowoff",
+        "pressure",
+        "vacuum"
+      ]
+    },
+    {
+      "id": "mdl_a44aeea9a12c",
+      "manufacturer_id": "mfr_a3b6899056e8",
+      "brand": "HRB",
+      "series": "HRB Ring Blower",
+      "model_name": "HRB-1102MP",
+      "blower_type_raw": "ring blower",
+      "stage": 2,
+      "data_quality": "catalog_spec",
+      "legacy": false,
+      "source_document": "2023황해전기링블러거_카다로그_ 최종20230905.pdf",
+      "application_tags": [
+        "blowoff",
+        "pressure",
+        "vacuum"
+      ]
+    },
+    {
+      "id": "mdl_d154b87b5cff",
+      "manufacturer_id": "mfr_a3b6899056e8",
+      "brand": "HRB",
+      "series": "HRB Ring Blower",
+      "model_name": "HRB-1102",
+      "blower_type_raw": "ring blower",
+      "stage": 2,
+      "data_quality": "catalog_spec",
+      "legacy": false,
+      "source_document": "2023황해전기링블러거_카다로그_ 최종20230905.pdf",
+      "application_tags": [
+        "blowoff",
+        "pressure",
+        "vacuum"
+      ]
+    },
+    {
+      "id": "mdl_6be4f3048770",
+      "manufacturer_id": "mfr_a3b6899056e8",
+      "brand": "HRB",
+      "series": "HRB Ring Blower",
+      "model_name": "HRB-1202MP",
+      "blower_type_raw": "ring blower",
+      "stage": 2,
+      "data_quality": "catalog_spec",
+      "legacy": false,
+      "source_document": "2023황해전기링블러거_카다로그_ 최종20230905.pdf",
+      "application_tags": [
+        "blowoff",
+        "pressure",
+        "vacuum"
+      ]
+    },
+    {
+      "id": "mdl_1b0ddcd4e651",
+      "manufacturer_id": "mfr_a3b6899056e8",
+      "brand": "HRB",
+      "series": "HRB Ring Blower",
+      "model_name": "HRB-1202",
+      "blower_type_raw": "ring blower",
+      "stage": 2,
+      "data_quality": "catalog_spec",
+      "legacy": false,
+      "source_document": "2023황해전기링블러거_카다로그_ 최종20230905.pdf",
+      "application_tags": [
+        "blowoff",
+        "pressure",
+        "vacuum"
+      ]
+    },
+    {
+      "id": "mdl_9cb80dff6c76",
+      "manufacturer_id": "mfr_a3b6899056e8",
+      "brand": "HRB",
+      "series": "HRB Ring Blower",
+      "model_name": "HRB-1112MP",
+      "blower_type_raw": "ring blower",
+      "stage": 2,
+      "data_quality": "catalog_spec",
+      "legacy": false,
+      "source_document": "2023황해전기링블러거_카다로그_ 최종20230905.pdf",
+      "application_tags": [
+        "blowoff",
+        "pressure",
+        "vacuum"
+      ]
+    },
+    {
+      "id": "mdl_bbab5919ca8b",
+      "manufacturer_id": "mfr_a3b6899056e8",
+      "brand": "HRB",
+      "series": "HRB Ring Blower",
+      "model_name": "HRB-1112",
+      "blower_type_raw": "ring blower",
+      "stage": 2,
+      "data_quality": "catalog_spec",
+      "legacy": false,
+      "source_document": "2023황해전기링블러거_카다로그_ 최종20230905.pdf",
+      "application_tags": [
+        "blowoff",
+        "pressure",
+        "vacuum"
+      ]
+    },
+    {
+      "id": "mdl_ba62cb551af3",
+      "manufacturer_id": "mfr_a3b6899056e8",
+      "brand": "HRB",
+      "series": "HRB Ring Blower",
+      "model_name": "HRB-1212MP",
+      "blower_type_raw": "ring blower",
+      "stage": 2,
+      "data_quality": "catalog_spec",
+      "legacy": false,
+      "source_document": "2023황해전기링블러거_카다로그_ 최종20230905.pdf",
+      "application_tags": [
+        "blowoff",
+        "pressure",
+        "vacuum"
+      ]
+    },
+    {
+      "id": "mdl_04f7e6a9c5ab",
+      "manufacturer_id": "mfr_a3b6899056e8",
+      "brand": "HRB",
+      "series": "HRB Ring Blower",
+      "model_name": "HRB-1212",
+      "blower_type_raw": "ring blower",
+      "stage": 2,
+      "data_quality": "catalog_spec",
+      "legacy": false,
+      "source_document": "2023황해전기링블러거_카다로그_ 최종20230905.pdf",
+      "application_tags": [
+        "blowoff",
+        "pressure",
+        "vacuum"
+      ]
+    },
+    {
+      "id": "mdl_4c04905bdc5f",
+      "manufacturer_id": "mfr_a3b6899056e8",
+      "brand": "HRB",
+      "series": "HRB Ring Blower",
+      "model_name": "HRB-1302MP",
+      "blower_type_raw": "ring blower",
+      "stage": 2,
+      "data_quality": "catalog_spec",
+      "legacy": false,
+      "source_document": "2023황해전기링블러거_카다로그_ 최종20230905.pdf",
+      "application_tags": [
+        "blowoff",
+        "pressure",
+        "vacuum"
+      ]
+    },
+    {
+      "id": "mdl_baa09682ae5d",
+      "manufacturer_id": "mfr_a3b6899056e8",
+      "brand": "HRB",
+      "series": "HRB Ring Blower",
+      "model_name": "HRB-1302",
+      "blower_type_raw": "ring blower",
+      "stage": 2,
+      "data_quality": "catalog_spec",
+      "legacy": false,
+      "source_document": "2023황해전기링블러거_카다로그_ 최종20230905.pdf",
+      "application_tags": [
+        "blowoff",
+        "pressure",
+        "vacuum"
+      ]
+    },
+    {
+      "id": "mdl_6f8bb0c4ee1b",
+      "manufacturer_id": "mfr_a3b6899056e8",
+      "brand": "HRB",
+      "series": "HRB Ring Blower",
+      "model_name": "HRB-1402MP",
+      "blower_type_raw": "ring blower",
+      "stage": 2,
+      "data_quality": "catalog_spec",
+      "legacy": false,
+      "source_document": "2023황해전기링블러거_카다로그_ 최종20230905.pdf",
+      "application_tags": [
+        "blowoff",
+        "pressure",
+        "vacuum"
+      ]
+    },
+    {
+      "id": "mdl_f6c1fbdccaec",
+      "manufacturer_id": "mfr_a3b6899056e8",
+      "brand": "HRB",
+      "series": "HRB Ring Blower",
+      "model_name": "HRB-1402",
+      "blower_type_raw": "ring blower",
+      "stage": 2,
+      "data_quality": "catalog_spec",
+      "legacy": false,
+      "source_document": "2023황해전기링블러거_카다로그_ 최종20230905.pdf",
+      "application_tags": [
+        "blowoff",
+        "pressure",
+        "vacuum"
+      ]
+    },
+    {
+      "id": "mdl_25be565ba385",
+      "manufacturer_id": "mfr_a3b6899056e8",
+      "brand": "HRB",
+      "series": "HRB Ring Blower",
+      "model_name": "HRB-1503MP",
+      "blower_type_raw": "ring blower",
+      "stage": 3,
+      "data_quality": "catalog_spec",
+      "legacy": false,
+      "source_document": "2023황해전기링블러거_카다로그_ 최종20230905.pdf",
+      "application_tags": [
+        "blowoff",
+        "pressure",
+        "vacuum"
+      ]
+    },
+    {
+      "id": "mdl_e2801e2725cb",
+      "manufacturer_id": "mfr_a3b6899056e8",
+      "brand": "HRB",
+      "series": "HRB Ring Blower",
+      "model_name": "HRB-1503",
+      "blower_type_raw": "ring blower",
+      "stage": 3,
+      "data_quality": "catalog_spec",
+      "legacy": false,
+      "source_document": "2023황해전기링블러거_카다로그_ 최종20230905.pdf",
+      "application_tags": [
+        "blowoff",
+        "pressure",
+        "vacuum"
+      ]
+    },
+    {
+      "id": "mdl_59161914f77b",
+      "manufacturer_id": "mfr_423d222e2a73",
+      "brand": "DHB",
+      "series": "DHB Ring Blower",
+      "model_name": "DHB-900",
+      "blower_type_raw": "ring blower",
+      "stage": 1,
+      "data_quality": "catalog_spec",
+      "legacy": false,
+      "source_document": "대하이엔지_카달로그.pdf",
+      "application_tags": [
+        "blowoff",
+        "pressure",
+        "vacuum"
+      ]
+    },
+    {
+      "id": "mdl_fb26477e0206",
+      "manufacturer_id": "mfr_423d222e2a73",
+      "brand": "DHB",
+      "series": "DHB Ring Blower",
+      "model_name": "DHB-1000",
+      "blower_type_raw": "ring blower",
+      "stage": 1,
+      "data_quality": "catalog_spec",
+      "legacy": false,
+      "source_document": "대하이엔지_카달로그.pdf",
+      "application_tags": [
+        "blowoff",
+        "pressure",
+        "vacuum"
+      ]
+    },
+    {
+      "id": "mdl_ad1c407eb42a",
+      "manufacturer_id": "mfr_423d222e2a73",
+      "brand": "DHB",
+      "series": "DHB Ring Blower",
+      "model_name": "DHB-1010",
+      "blower_type_raw": "ring blower",
+      "stage": 1,
+      "data_quality": "catalog_spec",
+      "legacy": false,
+      "source_document": "대하이엔지_카달로그.pdf",
+      "application_tags": [
+        "blowoff",
+        "pressure",
+        "vacuum"
+      ]
+    },
+    {
+      "id": "mdl_86f873595a82",
+      "manufacturer_id": "mfr_423d222e2a73",
+      "brand": "DHB",
+      "series": "DHB Ring Blower",
+      "model_name": "DHB-1050",
+      "blower_type_raw": "ring blower",
+      "stage": 1,
+      "data_quality": "catalog_spec",
+      "legacy": false,
+      "source_document": "대하이엔지_카달로그.pdf",
+      "application_tags": [
+        "blowoff",
+        "pressure",
+        "vacuum"
+      ]
+    },
+    {
+      "id": "mdl_86ef81eb77b5",
+      "manufacturer_id": "mfr_423d222e2a73",
+      "brand": "DHB",
+      "series": "DHB Ring Blower",
+      "model_name": "DHB-1100",
+      "blower_type_raw": "ring blower",
+      "stage": 1,
+      "data_quality": "catalog_spec",
+      "legacy": false,
+      "source_document": "대하이엔지_카달로그.pdf",
+      "application_tags": [
+        "blowoff",
+        "pressure",
+        "vacuum"
+      ]
+    },
+    {
+      "id": "mdl_030c69067bd5",
+      "manufacturer_id": "mfr_423d222e2a73",
+      "brand": "DHB",
+      "series": "DHB Ring Blower",
+      "model_name": "DHB-1200",
+      "blower_type_raw": "ring blower",
+      "stage": 1,
+      "data_quality": "catalog_spec",
+      "legacy": false,
+      "source_document": "대하이엔지_카달로그.pdf",
+      "application_tags": [
+        "blowoff",
+        "pressure",
+        "vacuum"
+      ]
+    },
+    {
+      "id": "mdl_4f867923a475",
+      "manufacturer_id": "mfr_423d222e2a73",
+      "brand": "DHB",
+      "series": "DHB Ring Blower",
+      "model_name": "DHB-1300",
+      "blower_type_raw": "ring blower",
+      "stage": 1,
+      "data_quality": "catalog_spec",
+      "legacy": false,
+      "source_document": "대하이엔지_카달로그.pdf",
+      "application_tags": [
+        "blowoff",
+        "pressure",
+        "vacuum"
+      ]
+    },
+    {
+      "id": "mdl_c9543b78f228",
+      "manufacturer_id": "mfr_423d222e2a73",
+      "brand": "DHB",
+      "series": "DHB Ring Blower",
+      "model_name": "DHB-1002",
+      "blower_type_raw": "ring blower",
+      "stage": 2,
+      "data_quality": "catalog_spec",
+      "legacy": false,
+      "source_document": "대하이엔지_카달로그.pdf",
+      "application_tags": [
+        "blowoff",
+        "pressure",
+        "vacuum"
+      ]
+    },
+    {
+      "id": "mdl_b8895bd217ec",
+      "manufacturer_id": "mfr_423d222e2a73",
+      "brand": "DHB",
+      "series": "DHB Ring Blower",
+      "model_name": "DHB-1102",
+      "blower_type_raw": "ring blower",
+      "stage": 2,
+      "data_quality": "catalog_spec",
+      "legacy": false,
+      "source_document": "대하이엔지_카달로그.pdf",
+      "application_tags": [
+        "blowoff",
+        "pressure",
+        "vacuum"
+      ]
+    },
+    {
+      "id": "mdl_21b04b069796",
+      "manufacturer_id": "mfr_423d222e2a73",
+      "brand": "DHB",
+      "series": "DHB Ring Blower",
+      "model_name": "DHB-1202",
+      "blower_type_raw": "ring blower",
+      "stage": 2,
+      "data_quality": "catalog_spec",
+      "legacy": false,
+      "source_document": "대하이엔지_카달로그.pdf",
+      "application_tags": [
+        "blowoff",
+        "pressure",
+        "vacuum"
+      ]
+    },
+    {
+      "id": "mdl_cb1e8577c623",
+      "manufacturer_id": "mfr_423d222e2a73",
+      "brand": "DHB",
+      "series": "DHB Ring Blower",
+      "model_name": "DHB-1112",
+      "blower_type_raw": "ring blower",
+      "stage": 2,
+      "data_quality": "catalog_spec",
+      "legacy": false,
+      "source_document": "대하이엔지_카달로그.pdf",
+      "application_tags": [
+        "blowoff",
+        "pressure",
+        "vacuum"
+      ]
+    },
+    {
+      "id": "mdl_aa11b76e478d",
+      "manufacturer_id": "mfr_423d222e2a73",
+      "brand": "DHB",
+      "series": "DHB Ring Blower",
+      "model_name": "DHB-1212",
+      "blower_type_raw": "ring blower",
+      "stage": 2,
+      "data_quality": "catalog_spec",
+      "legacy": false,
+      "source_document": "대하이엔지_카달로그.pdf",
+      "application_tags": [
+        "blowoff",
+        "pressure",
+        "vacuum"
+      ]
+    },
+    {
+      "id": "mdl_0e8ca0944282",
+      "manufacturer_id": "mfr_423d222e2a73",
+      "brand": "DHB",
+      "series": "DHB Ring Blower",
+      "model_name": "DHB-1302",
+      "blower_type_raw": "ring blower",
+      "stage": 2,
+      "data_quality": "catalog_spec",
+      "legacy": false,
+      "source_document": "대하이엔지_카달로그.pdf",
+      "application_tags": [
+        "blowoff",
+        "pressure",
+        "vacuum"
+      ]
+    },
+    {
+      "id": "mdl_bc9f2c68b8a0",
+      "manufacturer_id": "mfr_423d222e2a73",
+      "brand": "DHB",
+      "series": "DHB Ring Blower",
+      "model_name": "DHB-1402",
+      "blower_type_raw": "ring blower",
+      "stage": 2,
+      "data_quality": "catalog_spec",
+      "legacy": false,
+      "source_document": "대하이엔지_카달로그.pdf",
+      "application_tags": [
+        "blowoff",
+        "pressure",
+        "vacuum"
+      ]
+    },
+    {
+      "id": "mdl_07a3c84f8a89",
+      "manufacturer_id": "mfr_423d222e2a73",
+      "brand": "DHB",
+      "series": "DHB Ring Blower",
+      "model_name": "DHB-1504",
+      "blower_type_raw": "ring blower",
+      "stage": 2,
+      "data_quality": "catalog_spec",
+      "legacy": false,
+      "source_document": "대하이엔지_카달로그.pdf",
+      "application_tags": [
+        "blowoff",
+        "pressure",
+        "vacuum"
+      ]
+    },
+    {
+      "id": "mdl_c63cea10a547",
+      "manufacturer_id": "mfr_423d222e2a73",
+      "brand": "DHB",
+      "series": "DHB Ring Blower",
+      "model_name": "DHB-1604",
+      "blower_type_raw": "ring blower",
+      "stage": 2,
+      "data_quality": "catalog_spec",
+      "legacy": false,
+      "source_document": "대하이엔지_카달로그.pdf",
+      "application_tags": [
+        "blowoff",
+        "pressure",
+        "vacuum"
+      ]
+    },
+    {
+      "id": "mdl_e8d27fe47924",
+      "manufacturer_id": "mfr_abee349ae82a",
+      "brand": "Elektror",
+      "series": "2SD Side Channel Blower",
+      "model_name": "2SD 840 P",
+      "blower_type_raw": "side channel blower",
+      "stage": 2,
+      "data_quality": "catalog_spec",
+      "legacy": false,
+      "source_document": "9703404_1SD_2SD_DE_EN.pdf",
+      "application_tags": [
+        "drying",
+        "galvanic_tank_aeration",
+        "pressure",
+        "vacuum"
+      ]
+    },
+    {
+      "id": "mdl_4368ac60b4ca",
+      "manufacturer_id": "mfr_abee349ae82a",
+      "brand": "Elektror",
+      "series": "2SD Side Channel Blower",
+      "model_name": "2SD 840 IE3",
+      "blower_type_raw": "side channel blower",
+      "stage": 2,
+      "data_quality": "catalog_spec",
+      "legacy": false,
+      "source_document": "9703404_1SD_2SD_DE_EN.pdf",
+      "application_tags": [
+        "drying",
+        "galvanic_tank_aeration",
+        "pressure",
+        "vacuum"
+      ]
+    },
+    {
+      "id": "mdl_e193364d5b91",
+      "manufacturer_id": "mfr_abee349ae82a",
+      "brand": "Elektror",
+      "series": "2SD Side Channel Blower",
+      "model_name": "2SD 920 P",
+      "blower_type_raw": "side channel blower",
+      "stage": 2,
+      "data_quality": "catalog_spec",
+      "legacy": false,
+      "source_document": "9703404_1SD_2SD_DE_EN.pdf",
+      "application_tags": [
+        "drying",
+        "galvanic_tank_aeration",
+        "pressure",
+        "vacuum"
+      ]
+    },
+    {
+      "id": "mdl_cb272d954c09",
+      "manufacturer_id": "mfr_abee349ae82a",
+      "brand": "Elektror",
+      "series": "2SD Side Channel Blower",
+      "model_name": "2SD 920 IE3",
+      "blower_type_raw": "side channel blower",
+      "stage": 2,
+      "data_quality": "catalog_spec",
+      "legacy": false,
+      "source_document": "9703404_1SD_2SD_DE_EN.pdf",
+      "application_tags": [
+        "drying",
+        "galvanic_tank_aeration",
+        "pressure",
+        "vacuum"
+      ]
+    },
+    {
+      "id": "mdl_cd80249c9356",
+      "manufacturer_id": "mfr_66945d65e7d3",
+      "brand": "ELMO-G",
+      "series": "2BH1 Side-Channel Blower",
+      "model_name": "2BH1 800-1A C 2 6",
+      "blower_type_raw": "side channel blower",
+      "stage": null,
+      "data_quality": "curve_reference_required",
+      "legacy": true,
+      "source_document": "SIEMENS ELMO VACUUM PUMPS AND COMPRESSORS CATALOGUE.pdf",
+      "application_tags": [
+        "pressure",
+        "vacuum"
+      ]
+    },
+    {
+      "id": "mdl_2d6a005b4f9d",
+      "manufacturer_id": "mfr_66945d65e7d3",
+      "brand": "ELMO-G",
+      "series": "2BH1 Side-Channel Blower",
+      "model_name": "2BH1 900-1A C 0 6",
+      "blower_type_raw": "side channel blower",
+      "stage": null,
+      "data_quality": "curve_reference_required",
+      "legacy": true,
+      "source_document": "SIEMENS ELMO VACUUM PUMPS AND COMPRESSORS CATALOGUE.pdf",
+      "application_tags": [
+        "pressure",
+        "vacuum"
+      ]
+    },
+    {
+      "id": "mdl_c3cb6ffb23fa",
+      "manufacturer_id": "mfr_66945d65e7d3",
+      "brand": "ELMO-G",
+      "series": "2BH1 Side-Channel Blower",
+      "model_name": "2BH1 900-1A C 1 6",
+      "blower_type_raw": "side channel blower",
+      "stage": null,
+      "data_quality": "curve_reference_required",
+      "legacy": true,
+      "source_document": "SIEMENS ELMO VACUUM PUMPS AND COMPRESSORS CATALOGUE.pdf",
+      "application_tags": [
+        "pressure",
+        "vacuum"
+      ]
+    },
+    {
+      "id": "mdl_ca60d678025d",
+      "manufacturer_id": "mfr_66945d65e7d3",
+      "brand": "ELMO-G",
+      "series": "2BH1 Side-Channel Blower",
+      "model_name": "2BH1 810-1H C 3 6",
+      "blower_type_raw": "side channel blower",
+      "stage": null,
+      "data_quality": "curve_reference_required",
+      "legacy": true,
+      "source_document": "SIEMENS ELMO VACUUM PUMPS AND COMPRESSORS CATALOGUE.pdf",
+      "application_tags": [
+        "pressure",
+        "vacuum"
+      ]
+    },
+    {
+      "id": "mdl_4614a106adb8",
+      "manufacturer_id": "mfr_66945d65e7d3",
+      "brand": "ELMO-G",
+      "series": "2BH1 Side-Channel Blower",
+      "model_name": "2BH1 810-1H C 4 6",
+      "blower_type_raw": "side channel blower",
+      "stage": null,
+      "data_quality": "curve_reference_required",
+      "legacy": true,
+      "source_document": "SIEMENS ELMO VACUUM PUMPS AND COMPRESSORS CATALOGUE.pdf",
+      "application_tags": [
+        "pressure",
+        "vacuum"
+      ]
+    },
+    {
+      "id": "mdl_0df65bdea01e",
+      "manufacturer_id": "mfr_66945d65e7d3",
+      "brand": "ELMO-G",
+      "series": "2BH1 Side-Channel Blower",
+      "model_name": "2BH1 840-1J C 3 6",
+      "blower_type_raw": "side channel blower",
+      "stage": null,
+      "data_quality": "curve_reference_required",
+      "legacy": true,
+      "source_document": "SIEMENS ELMO VACUUM PUMPS AND COMPRESSORS CATALOGUE.pdf",
+      "application_tags": [
+        "pressure",
+        "vacuum"
+      ]
+    },
+    {
+      "id": "mdl_d86a915ee263",
+      "manufacturer_id": "mfr_66945d65e7d3",
+      "brand": "ELMO-G",
+      "series": "2BH1 Side-Channel Blower",
+      "model_name": "2BH1 910-1H C 1 6",
+      "blower_type_raw": "side channel blower",
+      "stage": null,
+      "data_quality": "curve_reference_required",
+      "legacy": true,
+      "source_document": "SIEMENS ELMO VACUUM PUMPS AND COMPRESSORS CATALOGUE.pdf",
+      "application_tags": [
+        "pressure",
+        "vacuum"
+      ]
+    },
+    {
+      "id": "mdl_cb73bc356987",
+      "manufacturer_id": "mfr_66945d65e7d3",
+      "brand": "ELMO-G",
+      "series": "2BH1 Side-Channel Blower",
+      "model_name": "2BH1 910-1H C 2 6",
+      "blower_type_raw": "side channel blower",
+      "stage": null,
+      "data_quality": "curve_reference_required",
+      "legacy": true,
+      "source_document": "SIEMENS ELMO VACUUM PUMPS AND COMPRESSORS CATALOGUE.pdf",
+      "application_tags": [
+        "pressure",
+        "vacuum"
+      ]
+    },
+    {
+      "id": "mdl_2cc77fb1d794",
+      "manufacturer_id": "mfr_a3b6899056e8",
+      "brand": "MINI",
+      "series": "High Speed Mini Ring Blower",
+      "model_name": "MINI-H100",
+      "blower_type_raw": "high-speed mini ring blower",
+      "stage": null,
+      "data_quality": "catalog_spec",
+      "legacy": false,
+      "source_document": "소형고속블로워 카다로그.pdf",
+      "application_tags": [
+        "compact_blower"
+      ]
+    },
+    {
+      "id": "mdl_1faf81f8b3c6",
+      "manufacturer_id": "mfr_a3b6899056e8",
+      "brand": "MINI",
+      "series": "High Speed Mini Ring Blower",
+      "model_name": "MINI-H200",
+      "blower_type_raw": "high-speed mini ring blower",
+      "stage": null,
+      "data_quality": "catalog_spec",
+      "legacy": false,
+      "source_document": "소형고속블로워 카다로그.pdf",
+      "application_tags": [
+        "compact_blower"
+      ]
+    },
+    {
+      "id": "mdl_62f147d6cc4e",
+      "manufacturer_id": "mfr_a3b6899056e8",
+      "brand": "MINI",
+      "series": "High Speed Mini Ring Blower",
+      "model_name": "MINI-H300",
+      "blower_type_raw": "high-speed mini ring blower",
+      "stage": null,
+      "data_quality": "catalog_spec",
+      "legacy": false,
+      "source_document": "소형고속블로워 카다로그.pdf",
+      "application_tags": [
+        "compact_blower"
+      ]
+    },
+    {
+      "id": "mdl_1027b5efd44e",
+      "manufacturer_id": "mfr_a3b6899056e8",
+      "brand": "MINI",
+      "series": "High Speed Mini Ring Blower",
+      "model_name": "MINI-H400",
+      "blower_type_raw": "high-speed mini ring blower",
+      "stage": null,
+      "data_quality": "catalog_spec",
+      "legacy": false,
+      "source_document": "소형고속블로워 카다로그.pdf",
+      "application_tags": [
+        "compact_blower"
+      ]
+    },
+    {
+      "id": "mdl_3c78a965a4b9",
+      "manufacturer_id": "mfr_a3b6899056e8",
+      "brand": "MINI",
+      "series": "High Speed Mini Ring Blower",
+      "model_name": "MINI-P35",
+      "blower_type_raw": "high-speed mini ring blower",
+      "stage": null,
+      "data_quality": "catalog_spec",
+      "legacy": false,
+      "source_document": "소형고속블로워 카다로그.pdf",
+      "application_tags": [
+        "compact_blower"
+      ]
+    },
+    {
+      "id": "mdl_ccbe5450e693",
+      "manufacturer_id": "mfr_d8b3a8535101",
+      "brand": "SAMOS",
+      "series": "SAMOS SB D0 Side Channel Blower",
+      "model_name": "SAMOS SB 0050 D0",
+      "blower_type_raw": "side channel blower",
+      "stage": null,
+      "data_quality": "catalog_spec",
+      "legacy": false,
+      "source_document": "Product Leaflet SAMOS SB 0050–0200 D0_Korea_Web_ko.pdf",
+      "application_tags": [
+        "pressure",
+        "vacuum"
+      ]
+    },
+    {
+      "id": "mdl_e34d61322393",
+      "manufacturer_id": "mfr_d8b3a8535101",
+      "brand": "SAMOS",
+      "series": "SAMOS SB D0 Side Channel Blower",
+      "model_name": "SAMOS SB 0080 D0 low-pressure",
+      "blower_type_raw": "side channel blower",
+      "stage": null,
+      "data_quality": "catalog_spec",
+      "legacy": false,
+      "source_document": "Product Leaflet SAMOS SB 0050–0200 D0_Korea_Web_ko.pdf",
+      "application_tags": [
+        "pressure",
+        "vacuum"
+      ]
+    },
+    {
+      "id": "mdl_3a42e37a79b6",
+      "manufacturer_id": "mfr_d8b3a8535101",
+      "brand": "SAMOS",
+      "series": "SAMOS SB D0 Side Channel Blower",
+      "model_name": "SAMOS SB 0080 D0 high-pressure",
+      "blower_type_raw": "side channel blower",
+      "stage": null,
+      "data_quality": "catalog_spec",
+      "legacy": false,
+      "source_document": "Product Leaflet SAMOS SB 0050–0200 D0_Korea_Web_ko.pdf",
+      "application_tags": [
+        "pressure",
+        "vacuum"
+      ]
+    },
+    {
+      "id": "mdl_119ddca5921a",
+      "manufacturer_id": "mfr_d8b3a8535101",
+      "brand": "SAMOS",
+      "series": "SAMOS SB D0 Side Channel Blower",
+      "model_name": "SAMOS SB 0140 D0",
+      "blower_type_raw": "side channel blower",
+      "stage": null,
+      "data_quality": "catalog_spec",
+      "legacy": false,
+      "source_document": "Product Leaflet SAMOS SB 0050–0200 D0_Korea_Web_ko.pdf",
+      "application_tags": [
+        "pressure",
+        "vacuum"
+      ]
+    },
+    {
+      "id": "mdl_45df0668ac15",
+      "manufacturer_id": "mfr_d8b3a8535101",
+      "brand": "SAMOS",
+      "series": "SAMOS SB D0 Side Channel Blower",
+      "model_name": "SAMOS SB 0200 D0",
+      "blower_type_raw": "side channel blower",
+      "stage": null,
+      "data_quality": "catalog_spec",
+      "legacy": false,
+      "source_document": "Product Leaflet SAMOS SB 0050–0200 D0_Korea_Web_ko.pdf",
+      "application_tags": [
+        "pressure",
+        "vacuum"
+      ]
+    },
+    {
+      "id": "mdl_99bc28d38ea3",
+      "manufacturer_id": "mfr_d8b3a8535101",
+      "brand": "SAMOS",
+      "series": "SAMOS SB D0 Side Channel Blower",
+      "model_name": "SAMOS SB 0200 D0 high-pressure",
+      "blower_type_raw": "side channel blower",
+      "stage": null,
+      "data_quality": "catalog_spec",
+      "legacy": false,
+      "source_document": "Product Leaflet SAMOS SB 0050–0200 D0_Korea_Web_ko.pdf",
+      "application_tags": [
+        "pressure",
+        "vacuum"
+      ]
+    },
+    {
+      "id": "mdl_d5b9a9a16cec",
+      "manufacturer_id": "mfr_8c8d5c5a57c9",
+      "brand": "Atlas Copco",
+      "series": "ZB 5/6/7 VSD+",
+      "model_name": "ZB 5 VSD+",
+      "blower_type_raw": "oil-free magnetic bearing turbo blower",
+      "stage": null,
+      "data_quality": "catalog_spec",
+      "legacy": false,
+      "source_document": "AtlasCopco_ZB 5_6_7 VSD+_Sales_Leaflet_ENG_0012020004_LR.pdf",
+      "application_tags": [
+        "fermentation",
+        "pneumatic_conveying",
+        "wastewater"
+      ]
+    },
+    {
+      "id": "mdl_8c4cebbf81b3",
+      "manufacturer_id": "mfr_8c8d5c5a57c9",
+      "brand": "Atlas Copco",
+      "series": "ZB 5/6/7 VSD+",
+      "model_name": "ZB 6 VSD+",
+      "blower_type_raw": "oil-free magnetic bearing turbo blower",
+      "stage": null,
+      "data_quality": "catalog_spec",
+      "legacy": false,
+      "source_document": "AtlasCopco_ZB 5_6_7 VSD+_Sales_Leaflet_ENG_0012020004_LR.pdf",
+      "application_tags": [
+        "fermentation",
+        "pneumatic_conveying",
+        "wastewater"
+      ]
+    },
+    {
+      "id": "mdl_beb1f1a09072",
+      "manufacturer_id": "mfr_8c8d5c5a57c9",
+      "brand": "Atlas Copco",
+      "series": "ZB 5/6/7 VSD+",
+      "model_name": "ZB 7 VSD+",
+      "blower_type_raw": "oil-free magnetic bearing turbo blower",
+      "stage": null,
+      "data_quality": "catalog_spec",
+      "legacy": false,
+      "source_document": "AtlasCopco_ZB 5_6_7 VSD+_Sales_Leaflet_ENG_0012020004_LR.pdf",
+      "application_tags": [
+        "fermentation",
+        "pneumatic_conveying",
+        "wastewater"
+      ]
+    },
+    {
+      "id": "mdl_0a52d806b559",
+      "manufacturer_id": "mfr_6775635143a5",
+      "brand": "KAESER",
+      "series": "PillAerator Magnetic Bearing Turbo Blower",
+      "model_name": "PillAerator 150 kW class",
+      "blower_type_raw": "magnetic bearing turbo blower",
+      "stage": null,
+      "data_quality": "catalog_spec",
+      "legacy": false,
+      "source_document": "document_o538df9h0d2gd9ofpr0iibf35q.pdf",
+      "application_tags": [
+        "air_knife",
+        "fermentation",
+        "industry",
+        "tank_aeration"
+      ]
+    },
+    {
+      "id": "mdl_6184343a9928",
+      "manufacturer_id": "mfr_6775635143a5",
+      "brand": "KAESER",
+      "series": "PillAerator Magnetic Bearing Turbo Blower",
+      "model_name": "PillAerator 300 kW class",
+      "blower_type_raw": "magnetic bearing turbo blower",
+      "stage": null,
+      "data_quality": "catalog_spec",
+      "legacy": false,
+      "source_document": "document_o538df9h0d2gd9ofpr0iibf35q.pdf",
+      "application_tags": [
+        "air_knife",
+        "fermentation",
+        "industry",
+        "tank_aeration"
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "id": "var_1078c37e7f72",
+      "model_id": "mdl_b3eda3bf4586",
+      "frequency_hz": null,
+      "phase": 3,
+      "voltage_v": null,
+      "motor_kw": 7.5,
+      "motor_hp": 10.06,
+      "motor_hp_basis": "converted_from_kW",
+      "max_airflow_m3_min": 12.0,
+      "max_airflow_m3_h": 720.0,
+      "pressure_raw_value": 41.2,
+      "pressure_raw_unit": "kPa",
+      "discharge_pressure_kpa": 41.2,
+      "vacuum_raw_value": null,
+      "vacuum_raw_unit": null,
+      "vacuum_kpa": null,
+      "sound_dba": null,
+      "weight_kg": 310,
+      "rpm": 5200,
+      "efficiency_class": null,
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_712c60a6320f",
+      "source_page_or_section": "p.3 TBB package blower specification",
+      "source_note": "Maximum flow and maximum pressure are separate endpoints on the P-Q curve.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_c80a73df75be",
+      "model_id": "mdl_a1551f777a4f",
+      "frequency_hz": 60,
+      "phase": 3,
+      "voltage_v": null,
+      "motor_kw": 12.6,
+      "motor_hp": 16.8,
+      "motor_hp_basis": "catalog_HP",
+      "max_airflow_m3_min": 10.0,
+      "max_airflow_m3_h": 600.0,
+      "pressure_raw_value": 6200,
+      "pressure_raw_unit": "mmAq",
+      "discharge_pressure_kpa": 60.8,
+      "vacuum_raw_value": 4300,
+      "vacuum_raw_unit": "mmAq",
+      "vacuum_kpa": 42.17,
+      "sound_dba": 82,
+      "weight_kg": 220,
+      "rpm": null,
+      "efficiency_class": null,
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_3b2ea290c685",
+      "source_page_or_section": "60Hz column",
+      "source_note": "User-supplied competitor ring-blower specification table.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_9b8ba9396228",
+      "model_id": "mdl_0f64df547635",
+      "frequency_hz": 60,
+      "phase": 3,
+      "voltage_v": null,
+      "motor_kw": 17.3,
+      "motor_hp": 23.1,
+      "motor_hp_basis": "catalog_HP",
+      "max_airflow_m3_min": 10.0,
+      "max_airflow_m3_h": 600.0,
+      "pressure_raw_value": 7200,
+      "pressure_raw_unit": "mmAq",
+      "discharge_pressure_kpa": 70.61,
+      "vacuum_raw_value": 4800,
+      "vacuum_raw_unit": "mmAq",
+      "vacuum_kpa": 47.07,
+      "sound_dba": 82,
+      "weight_kg": 236,
+      "rpm": null,
+      "efficiency_class": null,
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_3b2ea290c685",
+      "source_page_or_section": "60Hz column",
+      "source_note": "User-supplied competitor ring-blower specification table.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_05375b447879",
+      "model_id": "mdl_fd718b91fafb",
+      "frequency_hz": 60,
+      "phase": 3,
+      "voltage_v": null,
+      "motor_kw": 8.6,
+      "motor_hp": 11.5,
+      "motor_hp_basis": "catalog_HP",
+      "max_airflow_m3_min": 10.0,
+      "max_airflow_m3_h": 600.0,
+      "pressure_raw_value": 4500,
+      "pressure_raw_unit": "mmAq",
+      "discharge_pressure_kpa": 44.13,
+      "vacuum_raw_value": 3500,
+      "vacuum_raw_unit": "mmAq",
+      "vacuum_kpa": 34.32,
+      "sound_dba": null,
+      "weight_kg": null,
+      "rpm": null,
+      "efficiency_class": "IE3",
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_6f6d6d2f6796",
+      "source_page_or_section": "catalog summary / model page 32",
+      "source_note": "60Hz summary table. MP models are cataloged as IE3; non-MP are export-only in catalog notes.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_677ed4f76f36",
+      "model_id": "mdl_4987c4ada618",
+      "frequency_hz": 60,
+      "phase": 3,
+      "voltage_v": null,
+      "motor_kw": 8.6,
+      "motor_hp": 11.5,
+      "motor_hp_basis": "catalog_HP",
+      "max_airflow_m3_min": 10.0,
+      "max_airflow_m3_h": 600.0,
+      "pressure_raw_value": 4500,
+      "pressure_raw_unit": "mmAq",
+      "discharge_pressure_kpa": 44.13,
+      "vacuum_raw_value": 3500,
+      "vacuum_raw_unit": "mmAq",
+      "vacuum_kpa": 34.32,
+      "sound_dba": null,
+      "weight_kg": null,
+      "rpm": null,
+      "efficiency_class": null,
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_6f6d6d2f6796",
+      "source_page_or_section": "catalog summary / model page 32",
+      "source_note": "60Hz summary table. MP models are cataloged as IE3; non-MP are export-only in catalog notes.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_99060d243da8",
+      "model_id": "mdl_03bc07ac7069",
+      "frequency_hz": 60,
+      "phase": 3,
+      "voltage_v": null,
+      "motor_kw": 12.6,
+      "motor_hp": 16.8,
+      "motor_hp_basis": "catalog_HP",
+      "max_airflow_m3_min": 10.0,
+      "max_airflow_m3_h": 600.0,
+      "pressure_raw_value": 5000,
+      "pressure_raw_unit": "mmAq",
+      "discharge_pressure_kpa": 49.03,
+      "vacuum_raw_value": 3500,
+      "vacuum_raw_unit": "mmAq",
+      "vacuum_kpa": 34.32,
+      "sound_dba": null,
+      "weight_kg": null,
+      "rpm": null,
+      "efficiency_class": "IE3",
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_6f6d6d2f6796",
+      "source_page_or_section": "catalog summary / model page 34",
+      "source_note": "60Hz summary table. MP models are cataloged as IE3; non-MP are export-only in catalog notes.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_f82189bc8087",
+      "model_id": "mdl_b03eb1c5e2b2",
+      "frequency_hz": 60,
+      "phase": 3,
+      "voltage_v": null,
+      "motor_kw": 12.6,
+      "motor_hp": 16.8,
+      "motor_hp_basis": "catalog_HP",
+      "max_airflow_m3_min": 10.0,
+      "max_airflow_m3_h": 600.0,
+      "pressure_raw_value": 5000,
+      "pressure_raw_unit": "mmAq",
+      "discharge_pressure_kpa": 49.03,
+      "vacuum_raw_value": 3500,
+      "vacuum_raw_unit": "mmAq",
+      "vacuum_kpa": 34.32,
+      "sound_dba": null,
+      "weight_kg": null,
+      "rpm": null,
+      "efficiency_class": null,
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_6f6d6d2f6796",
+      "source_page_or_section": "catalog summary / model page 34",
+      "source_note": "60Hz summary table. MP models are cataloged as IE3; non-MP are export-only in catalog notes.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_0725644d656f",
+      "model_id": "mdl_1946f678139d",
+      "frequency_hz": 60,
+      "phase": 3,
+      "voltage_v": null,
+      "motor_kw": 8.6,
+      "motor_hp": 11.5,
+      "motor_hp_basis": "catalog_HP",
+      "max_airflow_m3_min": 18.0,
+      "max_airflow_m3_h": 1080.0,
+      "pressure_raw_value": 2200,
+      "pressure_raw_unit": "mmAq",
+      "discharge_pressure_kpa": 21.57,
+      "vacuum_raw_value": 1800,
+      "vacuum_raw_unit": "mmAq",
+      "vacuum_kpa": 17.65,
+      "sound_dba": null,
+      "weight_kg": null,
+      "rpm": null,
+      "efficiency_class": "IE3",
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_6f6d6d2f6796",
+      "source_page_or_section": "catalog summary / model page 36",
+      "source_note": "60Hz summary table. MP models are cataloged as IE3; non-MP are export-only in catalog notes.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_9d1eed71020f",
+      "model_id": "mdl_325343cb359c",
+      "frequency_hz": 60,
+      "phase": 3,
+      "voltage_v": null,
+      "motor_kw": 8.6,
+      "motor_hp": 11.5,
+      "motor_hp_basis": "catalog_HP",
+      "max_airflow_m3_min": 18.0,
+      "max_airflow_m3_h": 1080.0,
+      "pressure_raw_value": 2200,
+      "pressure_raw_unit": "mmAq",
+      "discharge_pressure_kpa": 21.57,
+      "vacuum_raw_value": 1800,
+      "vacuum_raw_unit": "mmAq",
+      "vacuum_kpa": 17.65,
+      "sound_dba": null,
+      "weight_kg": null,
+      "rpm": null,
+      "efficiency_class": null,
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_6f6d6d2f6796",
+      "source_page_or_section": "catalog summary / model page 36",
+      "source_note": "60Hz summary table. MP models are cataloged as IE3; non-MP are export-only in catalog notes.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_f92af67bfe37",
+      "model_id": "mdl_593fe8bd0ec0",
+      "frequency_hz": 60,
+      "phase": 3,
+      "voltage_v": null,
+      "motor_kw": 12.6,
+      "motor_hp": 16.8,
+      "motor_hp_basis": "catalog_HP",
+      "max_airflow_m3_min": 20.0,
+      "max_airflow_m3_h": 1200.0,
+      "pressure_raw_value": 2100,
+      "pressure_raw_unit": "mmAq",
+      "discharge_pressure_kpa": 20.59,
+      "vacuum_raw_value": 2000,
+      "vacuum_raw_unit": "mmAq",
+      "vacuum_kpa": 19.61,
+      "sound_dba": null,
+      "weight_kg": null,
+      "rpm": null,
+      "efficiency_class": "IE3",
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_6f6d6d2f6796",
+      "source_page_or_section": "catalog summary / model page 38",
+      "source_note": "60Hz summary table. MP models are cataloged as IE3; non-MP are export-only in catalog notes.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_f4ecc06d6ff4",
+      "model_id": "mdl_a62144baf7ab",
+      "frequency_hz": 60,
+      "phase": 3,
+      "voltage_v": null,
+      "motor_kw": 12.6,
+      "motor_hp": 16.8,
+      "motor_hp_basis": "catalog_HP",
+      "max_airflow_m3_min": 20.0,
+      "max_airflow_m3_h": 1200.0,
+      "pressure_raw_value": 2100,
+      "pressure_raw_unit": "mmAq",
+      "discharge_pressure_kpa": 20.59,
+      "vacuum_raw_value": 2000,
+      "vacuum_raw_unit": "mmAq",
+      "vacuum_kpa": 19.61,
+      "sound_dba": null,
+      "weight_kg": null,
+      "rpm": null,
+      "efficiency_class": null,
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_6f6d6d2f6796",
+      "source_page_or_section": "catalog summary / model page 38",
+      "source_note": "60Hz summary table. MP models are cataloged as IE3; non-MP are export-only in catalog notes.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_050cf9bde012",
+      "model_id": "mdl_8a35a719f9c1",
+      "frequency_hz": 60,
+      "phase": 3,
+      "voltage_v": null,
+      "motor_kw": 15.5,
+      "motor_hp": 20.7,
+      "motor_hp_basis": "catalog_HP",
+      "max_airflow_m3_min": 20.0,
+      "max_airflow_m3_h": 1200.0,
+      "pressure_raw_value": 3000,
+      "pressure_raw_unit": "mmAq",
+      "discharge_pressure_kpa": 29.42,
+      "vacuum_raw_value": 2900,
+      "vacuum_raw_unit": "mmAq",
+      "vacuum_kpa": 28.44,
+      "sound_dba": null,
+      "weight_kg": null,
+      "rpm": null,
+      "efficiency_class": "IE3",
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_6f6d6d2f6796",
+      "source_page_or_section": "catalog summary / model page 38",
+      "source_note": "60Hz summary table. MP models are cataloged as IE3; non-MP are export-only in catalog notes.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_85e1a286b26a",
+      "model_id": "mdl_abd3524f42f0",
+      "frequency_hz": 60,
+      "phase": 3,
+      "voltage_v": null,
+      "motor_kw": 15.3,
+      "motor_hp": 20.4,
+      "motor_hp_basis": "catalog_HP",
+      "max_airflow_m3_min": 20.0,
+      "max_airflow_m3_h": 1200.0,
+      "pressure_raw_value": 3000,
+      "pressure_raw_unit": "mmAq",
+      "discharge_pressure_kpa": 29.42,
+      "vacuum_raw_value": 2900,
+      "vacuum_raw_unit": "mmAq",
+      "vacuum_kpa": 28.44,
+      "sound_dba": null,
+      "weight_kg": null,
+      "rpm": null,
+      "efficiency_class": null,
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_6f6d6d2f6796",
+      "source_page_or_section": "catalog summary / model page 38",
+      "source_note": "60Hz summary table. MP models are cataloged as IE3; non-MP are export-only in catalog notes.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_7f19f0d87a88",
+      "model_id": "mdl_f8107898372d",
+      "frequency_hz": 60,
+      "phase": 3,
+      "voltage_v": null,
+      "motor_kw": 22.7,
+      "motor_hp": 30.0,
+      "motor_hp_basis": "catalog_HP",
+      "max_airflow_m3_min": 20.0,
+      "max_airflow_m3_h": 1200.0,
+      "pressure_raw_value": 4500,
+      "pressure_raw_unit": "mmAq",
+      "discharge_pressure_kpa": 44.13,
+      "vacuum_raw_value": 3800,
+      "vacuum_raw_unit": "mmAq",
+      "vacuum_kpa": 37.27,
+      "sound_dba": null,
+      "weight_kg": null,
+      "rpm": null,
+      "efficiency_class": "IE3",
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_6f6d6d2f6796",
+      "source_page_or_section": "catalog summary / model page 38",
+      "source_note": "60Hz summary table. MP models are cataloged as IE3; non-MP are export-only in catalog notes.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_45d7d72a1b43",
+      "model_id": "mdl_2aadda9846de",
+      "frequency_hz": 60,
+      "phase": 3,
+      "voltage_v": null,
+      "motor_kw": 22.7,
+      "motor_hp": 30.0,
+      "motor_hp_basis": "catalog_HP",
+      "max_airflow_m3_min": 20.0,
+      "max_airflow_m3_h": 1200.0,
+      "pressure_raw_value": 4500,
+      "pressure_raw_unit": "mmAq",
+      "discharge_pressure_kpa": 44.13,
+      "vacuum_raw_value": 3800,
+      "vacuum_raw_unit": "mmAq",
+      "vacuum_kpa": 37.27,
+      "sound_dba": null,
+      "weight_kg": null,
+      "rpm": null,
+      "efficiency_class": null,
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_6f6d6d2f6796",
+      "source_page_or_section": "catalog summary / model page 38",
+      "source_note": "60Hz summary table. MP models are cataloged as IE3; non-MP are export-only in catalog notes.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_e23bf588f437",
+      "model_id": "mdl_52e3fa7c62c3",
+      "frequency_hz": 60,
+      "phase": 3,
+      "voltage_v": null,
+      "motor_kw": 8.6,
+      "motor_hp": 11.5,
+      "motor_hp_basis": "catalog_HP",
+      "max_airflow_m3_min": 6.1,
+      "max_airflow_m3_h": 366.0,
+      "pressure_raw_value": 6000,
+      "pressure_raw_unit": "mmAq",
+      "discharge_pressure_kpa": 58.84,
+      "vacuum_raw_value": 4500,
+      "vacuum_raw_unit": "mmAq",
+      "vacuum_kpa": 44.13,
+      "sound_dba": null,
+      "weight_kg": null,
+      "rpm": null,
+      "efficiency_class": "IE3",
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_6f6d6d2f6796",
+      "source_page_or_section": "catalog summary / model page 46",
+      "source_note": "60Hz summary table. MP models are cataloged as IE3; non-MP are export-only in catalog notes.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_a54c5def50db",
+      "model_id": "mdl_6958fd1b7149",
+      "frequency_hz": 60,
+      "phase": 3,
+      "voltage_v": null,
+      "motor_kw": 8.6,
+      "motor_hp": 11.5,
+      "motor_hp_basis": "catalog_HP",
+      "max_airflow_m3_min": 6.1,
+      "max_airflow_m3_h": 366.0,
+      "pressure_raw_value": 6000,
+      "pressure_raw_unit": "mmAq",
+      "discharge_pressure_kpa": 58.84,
+      "vacuum_raw_value": 4500,
+      "vacuum_raw_unit": "mmAq",
+      "vacuum_kpa": 44.13,
+      "sound_dba": null,
+      "weight_kg": null,
+      "rpm": null,
+      "efficiency_class": null,
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_6f6d6d2f6796",
+      "source_page_or_section": "catalog summary / model page 46",
+      "source_note": "60Hz summary table. MP models are cataloged as IE3; non-MP are export-only in catalog notes.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_5d6d719874bd",
+      "model_id": "mdl_a44aeea9a12c",
+      "frequency_hz": 60,
+      "phase": 3,
+      "voltage_v": null,
+      "motor_kw": 12.6,
+      "motor_hp": 16.8,
+      "motor_hp_basis": "catalog_HP",
+      "max_airflow_m3_min": 11.0,
+      "max_airflow_m3_h": 660.0,
+      "pressure_raw_value": 6200,
+      "pressure_raw_unit": "mmAq",
+      "discharge_pressure_kpa": 60.8,
+      "vacuum_raw_value": 4300,
+      "vacuum_raw_unit": "mmAq",
+      "vacuum_kpa": 42.17,
+      "sound_dba": null,
+      "weight_kg": null,
+      "rpm": null,
+      "efficiency_class": "IE3",
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_6f6d6d2f6796",
+      "source_page_or_section": "catalog summary / model page 48",
+      "source_note": "60Hz summary table. MP models are cataloged as IE3; non-MP are export-only in catalog notes.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_3665bbade4c1",
+      "model_id": "mdl_d154b87b5cff",
+      "frequency_hz": 60,
+      "phase": 3,
+      "voltage_v": null,
+      "motor_kw": 12.6,
+      "motor_hp": 16.8,
+      "motor_hp_basis": "catalog_HP",
+      "max_airflow_m3_min": 11.0,
+      "max_airflow_m3_h": 660.0,
+      "pressure_raw_value": 6200,
+      "pressure_raw_unit": "mmAq",
+      "discharge_pressure_kpa": 60.8,
+      "vacuum_raw_value": 4300,
+      "vacuum_raw_unit": "mmAq",
+      "vacuum_kpa": 42.17,
+      "sound_dba": null,
+      "weight_kg": null,
+      "rpm": null,
+      "efficiency_class": null,
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_6f6d6d2f6796",
+      "source_page_or_section": "catalog summary / model page 48",
+      "source_note": "60Hz summary table. MP models are cataloged as IE3; non-MP are export-only in catalog notes.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_90364d532a7f",
+      "model_id": "mdl_6be4f3048770",
+      "frequency_hz": 60,
+      "phase": 3,
+      "voltage_v": null,
+      "motor_kw": 17.3,
+      "motor_hp": 23.0,
+      "motor_hp_basis": "catalog_HP",
+      "max_airflow_m3_min": 11.0,
+      "max_airflow_m3_h": 660.0,
+      "pressure_raw_value": 7200,
+      "pressure_raw_unit": "mmAq",
+      "discharge_pressure_kpa": 70.61,
+      "vacuum_raw_value": 4800,
+      "vacuum_raw_unit": "mmAq",
+      "vacuum_kpa": 47.07,
+      "sound_dba": null,
+      "weight_kg": null,
+      "rpm": null,
+      "efficiency_class": "IE3",
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_6f6d6d2f6796",
+      "source_page_or_section": "catalog summary / model page 48",
+      "source_note": "60Hz summary table. MP models are cataloged as IE3; non-MP are export-only in catalog notes.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_5d75478488ca",
+      "model_id": "mdl_1b0ddcd4e651",
+      "frequency_hz": 60,
+      "phase": 3,
+      "voltage_v": null,
+      "motor_kw": 17.3,
+      "motor_hp": 23.0,
+      "motor_hp_basis": "catalog_HP",
+      "max_airflow_m3_min": 11.0,
+      "max_airflow_m3_h": 660.0,
+      "pressure_raw_value": 7200,
+      "pressure_raw_unit": "mmAq",
+      "discharge_pressure_kpa": 70.61,
+      "vacuum_raw_value": 4800,
+      "vacuum_raw_unit": "mmAq",
+      "vacuum_kpa": 47.07,
+      "sound_dba": null,
+      "weight_kg": null,
+      "rpm": null,
+      "efficiency_class": null,
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_6f6d6d2f6796",
+      "source_page_or_section": "catalog summary / model page 48",
+      "source_note": "60Hz summary table. MP models are cataloged as IE3; non-MP are export-only in catalog notes.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_432115b6f8be",
+      "model_id": "mdl_9cb80dff6c76",
+      "frequency_hz": 60,
+      "phase": 3,
+      "voltage_v": null,
+      "motor_kw": 12.6,
+      "motor_hp": 16.8,
+      "motor_hp_basis": "catalog_HP",
+      "max_airflow_m3_min": 18.0,
+      "max_airflow_m3_h": 1080.0,
+      "pressure_raw_value": 2500,
+      "pressure_raw_unit": "mmAq",
+      "discharge_pressure_kpa": 24.52,
+      "vacuum_raw_value": 2300,
+      "vacuum_raw_unit": "mmAq",
+      "vacuum_kpa": 22.56,
+      "sound_dba": null,
+      "weight_kg": null,
+      "rpm": null,
+      "efficiency_class": "IE3",
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_6f6d6d2f6796",
+      "source_page_or_section": "catalog summary / model page 50",
+      "source_note": "60Hz summary table. MP models are cataloged as IE3; non-MP are export-only in catalog notes.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_80c1e9b09027",
+      "model_id": "mdl_bbab5919ca8b",
+      "frequency_hz": 60,
+      "phase": 3,
+      "voltage_v": null,
+      "motor_kw": 12.6,
+      "motor_hp": 16.8,
+      "motor_hp_basis": "catalog_HP",
+      "max_airflow_m3_min": 18.0,
+      "max_airflow_m3_h": 1080.0,
+      "pressure_raw_value": 2500,
+      "pressure_raw_unit": "mmAq",
+      "discharge_pressure_kpa": 24.52,
+      "vacuum_raw_value": 2300,
+      "vacuum_raw_unit": "mmAq",
+      "vacuum_kpa": 22.56,
+      "sound_dba": null,
+      "weight_kg": null,
+      "rpm": null,
+      "efficiency_class": null,
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_6f6d6d2f6796",
+      "source_page_or_section": "catalog summary / model page 50",
+      "source_note": "60Hz summary table. MP models are cataloged as IE3; non-MP are export-only in catalog notes.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_98484ec1c743",
+      "model_id": "mdl_ba62cb551af3",
+      "frequency_hz": 60,
+      "phase": 3,
+      "voltage_v": null,
+      "motor_kw": 17.3,
+      "motor_hp": 23.0,
+      "motor_hp_basis": "catalog_HP",
+      "max_airflow_m3_min": 18.0,
+      "max_airflow_m3_h": 1080.0,
+      "pressure_raw_value": 3800,
+      "pressure_raw_unit": "mmAq",
+      "discharge_pressure_kpa": 37.27,
+      "vacuum_raw_value": 3000,
+      "vacuum_raw_unit": "mmAq",
+      "vacuum_kpa": 29.42,
+      "sound_dba": null,
+      "weight_kg": null,
+      "rpm": null,
+      "efficiency_class": "IE3",
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_6f6d6d2f6796",
+      "source_page_or_section": "catalog summary / model page 50",
+      "source_note": "60Hz summary table. MP models are cataloged as IE3; non-MP are export-only in catalog notes.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_805e2aa65951",
+      "model_id": "mdl_04f7e6a9c5ab",
+      "frequency_hz": 60,
+      "phase": 3,
+      "voltage_v": null,
+      "motor_kw": 17.3,
+      "motor_hp": 23.0,
+      "motor_hp_basis": "catalog_HP",
+      "max_airflow_m3_min": 18.0,
+      "max_airflow_m3_h": 1080.0,
+      "pressure_raw_value": 3800,
+      "pressure_raw_unit": "mmAq",
+      "discharge_pressure_kpa": 37.27,
+      "vacuum_raw_value": 3000,
+      "vacuum_raw_unit": "mmAq",
+      "vacuum_kpa": 29.42,
+      "sound_dba": null,
+      "weight_kg": null,
+      "rpm": null,
+      "efficiency_class": null,
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_6f6d6d2f6796",
+      "source_page_or_section": "catalog summary / model page 50",
+      "source_note": "60Hz summary table. MP models are cataloged as IE3; non-MP are export-only in catalog notes.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_0e20f399b4b7",
+      "model_id": "mdl_4c04905bdc5f",
+      "frequency_hz": 60,
+      "phase": 3,
+      "voltage_v": null,
+      "motor_kw": 15.5,
+      "motor_hp": 20.7,
+      "motor_hp_basis": "catalog_HP",
+      "max_airflow_m3_min": 22.0,
+      "max_airflow_m3_h": 1320.0,
+      "pressure_raw_value": 2500,
+      "pressure_raw_unit": "mmAq",
+      "discharge_pressure_kpa": 24.52,
+      "vacuum_raw_value": 2700,
+      "vacuum_raw_unit": "mmAq",
+      "vacuum_kpa": 26.48,
+      "sound_dba": null,
+      "weight_kg": null,
+      "rpm": null,
+      "efficiency_class": "IE3",
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_6f6d6d2f6796",
+      "source_page_or_section": "catalog summary / model page 52",
+      "source_note": "60Hz summary table. MP models are cataloged as IE3; non-MP are export-only in catalog notes.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_5330cd858af2",
+      "model_id": "mdl_baa09682ae5d",
+      "frequency_hz": 60,
+      "phase": 3,
+      "voltage_v": null,
+      "motor_kw": 15.3,
+      "motor_hp": 20.4,
+      "motor_hp_basis": "catalog_HP",
+      "max_airflow_m3_min": 22.0,
+      "max_airflow_m3_h": 1320.0,
+      "pressure_raw_value": 2500,
+      "pressure_raw_unit": "mmAq",
+      "discharge_pressure_kpa": 24.52,
+      "vacuum_raw_value": 2700,
+      "vacuum_raw_unit": "mmAq",
+      "vacuum_kpa": 26.48,
+      "sound_dba": null,
+      "weight_kg": null,
+      "rpm": null,
+      "efficiency_class": null,
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_6f6d6d2f6796",
+      "source_page_or_section": "catalog summary / model page 52",
+      "source_note": "60Hz summary table. MP models are cataloged as IE3; non-MP are export-only in catalog notes.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_1656bd832ed3",
+      "model_id": "mdl_6f8bb0c4ee1b",
+      "frequency_hz": 60,
+      "phase": 3,
+      "voltage_v": null,
+      "motor_kw": 18.5,
+      "motor_hp": 24.7,
+      "motor_hp_basis": "catalog_HP",
+      "max_airflow_m3_min": 22.0,
+      "max_airflow_m3_h": 1320.0,
+      "pressure_raw_value": 3500,
+      "pressure_raw_unit": "mmAq",
+      "discharge_pressure_kpa": 34.32,
+      "vacuum_raw_value": 3200,
+      "vacuum_raw_unit": "mmAq",
+      "vacuum_kpa": 31.38,
+      "sound_dba": null,
+      "weight_kg": null,
+      "rpm": null,
+      "efficiency_class": "IE3",
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_6f6d6d2f6796",
+      "source_page_or_section": "catalog summary / model page 52",
+      "source_note": "60Hz summary table. MP models are cataloged as IE3; non-MP are export-only in catalog notes.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_4cd6fdaabd74",
+      "model_id": "mdl_f6c1fbdccaec",
+      "frequency_hz": 60,
+      "phase": 3,
+      "voltage_v": null,
+      "motor_kw": 18.5,
+      "motor_hp": 24.7,
+      "motor_hp_basis": "catalog_HP",
+      "max_airflow_m3_min": 22.0,
+      "max_airflow_m3_h": 1320.0,
+      "pressure_raw_value": 3500,
+      "pressure_raw_unit": "mmAq",
+      "discharge_pressure_kpa": 34.32,
+      "vacuum_raw_value": 3200,
+      "vacuum_raw_unit": "mmAq",
+      "vacuum_kpa": 31.38,
+      "sound_dba": null,
+      "weight_kg": null,
+      "rpm": null,
+      "efficiency_class": null,
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_6f6d6d2f6796",
+      "source_page_or_section": "catalog summary / model page 52",
+      "source_note": "60Hz summary table. MP models are cataloged as IE3; non-MP are export-only in catalog notes.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_a256ae5313ad",
+      "model_id": "mdl_25be565ba385",
+      "frequency_hz": 60,
+      "phase": 3,
+      "voltage_v": null,
+      "motor_kw": 18.5,
+      "motor_hp": 24.7,
+      "motor_hp_basis": "catalog_HP",
+      "max_airflow_m3_min": 40.0,
+      "max_airflow_m3_h": 2400.0,
+      "pressure_raw_value": 1200,
+      "pressure_raw_unit": "mmAq",
+      "discharge_pressure_kpa": 11.77,
+      "vacuum_raw_value": 1100,
+      "vacuum_raw_unit": "mmAq",
+      "vacuum_kpa": 10.79,
+      "sound_dba": null,
+      "weight_kg": null,
+      "rpm": null,
+      "efficiency_class": "IE3",
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_6f6d6d2f6796",
+      "source_page_or_section": "catalog summary / model page 54",
+      "source_note": "60Hz summary table. MP models are cataloged as IE3; non-MP are export-only in catalog notes.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_c5bb58e01e50",
+      "model_id": "mdl_e2801e2725cb",
+      "frequency_hz": 60,
+      "phase": 3,
+      "voltage_v": null,
+      "motor_kw": 18.5,
+      "motor_hp": 24.7,
+      "motor_hp_basis": "catalog_HP",
+      "max_airflow_m3_min": 40.0,
+      "max_airflow_m3_h": 2400.0,
+      "pressure_raw_value": 1200,
+      "pressure_raw_unit": "mmAq",
+      "discharge_pressure_kpa": 11.77,
+      "vacuum_raw_value": 1100,
+      "vacuum_raw_unit": "mmAq",
+      "vacuum_kpa": 10.79,
+      "sound_dba": null,
+      "weight_kg": null,
+      "rpm": null,
+      "efficiency_class": null,
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_6f6d6d2f6796",
+      "source_page_or_section": "catalog summary / model page 54",
+      "source_note": "60Hz summary table. MP models are cataloged as IE3; non-MP are export-only in catalog notes.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_126c24d125ce",
+      "model_id": "mdl_59161914f77b",
+      "frequency_hz": 60,
+      "phase": 3,
+      "voltage_v": null,
+      "motor_kw": 8.6,
+      "motor_hp": 11.53,
+      "motor_hp_basis": "converted_from_kW",
+      "max_airflow_m3_min": 10,
+      "max_airflow_m3_h": 600,
+      "pressure_raw_value": 4500,
+      "pressure_raw_unit": "mmH2O",
+      "discharge_pressure_kpa": 44.13,
+      "vacuum_raw_value": 3500,
+      "vacuum_raw_unit": "mmH2O",
+      "vacuum_kpa": 34.32,
+      "sound_dba": 78,
+      "weight_kg": 155,
+      "rpm": null,
+      "efficiency_class": null,
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_cf22ebc25e68",
+      "source_page_or_section": "60Hz Performance table",
+      "source_note": "Motor kW uses normal-efficiency column when two motor efficiency columns are shown.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_ccf8ee924e09",
+      "model_id": "mdl_fb26477e0206",
+      "frequency_hz": 60,
+      "phase": 3,
+      "voltage_v": null,
+      "motor_kw": 12.6,
+      "motor_hp": 16.9,
+      "motor_hp_basis": "converted_from_kW",
+      "max_airflow_m3_min": 10,
+      "max_airflow_m3_h": 600,
+      "pressure_raw_value": 5000,
+      "pressure_raw_unit": "mmH2O",
+      "discharge_pressure_kpa": 49.03,
+      "vacuum_raw_value": 4000,
+      "vacuum_raw_unit": "mmH2O",
+      "vacuum_kpa": 39.23,
+      "sound_dba": 78,
+      "weight_kg": 182,
+      "rpm": null,
+      "efficiency_class": null,
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_cf22ebc25e68",
+      "source_page_or_section": "60Hz Performance table",
+      "source_note": "Motor kW uses normal-efficiency column when two motor efficiency columns are shown.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_88f375df626b",
+      "model_id": "mdl_ad1c407eb42a",
+      "frequency_hz": 60,
+      "phase": 3,
+      "voltage_v": null,
+      "motor_kw": 8.6,
+      "motor_hp": 11.53,
+      "motor_hp_basis": "converted_from_kW",
+      "max_airflow_m3_min": 16,
+      "max_airflow_m3_h": 960,
+      "pressure_raw_value": 2400,
+      "pressure_raw_unit": "mmH2O",
+      "discharge_pressure_kpa": 23.54,
+      "vacuum_raw_value": 2200,
+      "vacuum_raw_unit": "mmH2O",
+      "vacuum_kpa": 21.57,
+      "sound_dba": 80,
+      "weight_kg": 170,
+      "rpm": null,
+      "efficiency_class": null,
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_cf22ebc25e68",
+      "source_page_or_section": "60Hz Performance table",
+      "source_note": "Motor kW uses normal-efficiency column when two motor efficiency columns are shown.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_6b5c49ebcdf0",
+      "model_id": "mdl_86f873595a82",
+      "frequency_hz": 60,
+      "phase": 3,
+      "voltage_v": null,
+      "motor_kw": 12.6,
+      "motor_hp": 16.9,
+      "motor_hp_basis": "converted_from_kW",
+      "max_airflow_m3_min": 16,
+      "max_airflow_m3_h": 960,
+      "pressure_raw_value": 3400,
+      "pressure_raw_unit": "mmH2O",
+      "discharge_pressure_kpa": 33.34,
+      "vacuum_raw_value": 3000,
+      "vacuum_raw_unit": "mmH2O",
+      "vacuum_kpa": 29.42,
+      "sound_dba": 80,
+      "weight_kg": 201,
+      "rpm": null,
+      "efficiency_class": null,
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_cf22ebc25e68",
+      "source_page_or_section": "60Hz Performance table",
+      "source_note": "Motor kW uses normal-efficiency column when two motor efficiency columns are shown.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_1b6292eb8814",
+      "model_id": "mdl_86ef81eb77b5",
+      "frequency_hz": 60,
+      "phase": 3,
+      "voltage_v": null,
+      "motor_kw": 12.6,
+      "motor_hp": 16.9,
+      "motor_hp_basis": "converted_from_kW",
+      "max_airflow_m3_min": 20,
+      "max_airflow_m3_h": 1200,
+      "pressure_raw_value": 2100,
+      "pressure_raw_unit": "mmH2O",
+      "discharge_pressure_kpa": 20.59,
+      "vacuum_raw_value": 2000,
+      "vacuum_raw_unit": "mmH2O",
+      "vacuum_kpa": 19.61,
+      "sound_dba": 82,
+      "weight_kg": 248,
+      "rpm": null,
+      "efficiency_class": null,
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_cf22ebc25e68",
+      "source_page_or_section": "60Hz Performance table",
+      "source_note": "Motor kW uses normal-efficiency column when two motor efficiency columns are shown.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_0bd62765524f",
+      "model_id": "mdl_030c69067bd5",
+      "frequency_hz": 60,
+      "phase": 3,
+      "voltage_v": null,
+      "motor_kw": 15.0,
+      "motor_hp": 20.12,
+      "motor_hp_basis": "converted_from_kW",
+      "max_airflow_m3_min": 20,
+      "max_airflow_m3_h": 1200,
+      "pressure_raw_value": 3000,
+      "pressure_raw_unit": "mmH2O",
+      "discharge_pressure_kpa": 29.42,
+      "vacuum_raw_value": 2900,
+      "vacuum_raw_unit": "mmH2O",
+      "vacuum_kpa": 28.44,
+      "sound_dba": 82,
+      "weight_kg": 257,
+      "rpm": null,
+      "efficiency_class": null,
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_cf22ebc25e68",
+      "source_page_or_section": "60Hz Performance table",
+      "source_note": "Motor kW uses normal-efficiency column when two motor efficiency columns are shown.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_69ab524e3588",
+      "model_id": "mdl_4f867923a475",
+      "frequency_hz": 60,
+      "phase": 3,
+      "voltage_v": null,
+      "motor_kw": 22.7,
+      "motor_hp": 30.44,
+      "motor_hp_basis": "converted_from_kW",
+      "max_airflow_m3_min": 20,
+      "max_airflow_m3_h": 1200,
+      "pressure_raw_value": 4500,
+      "pressure_raw_unit": "mmH2O",
+      "discharge_pressure_kpa": 44.13,
+      "vacuum_raw_value": 3800,
+      "vacuum_raw_unit": "mmH2O",
+      "vacuum_kpa": 37.27,
+      "sound_dba": 82,
+      "weight_kg": 279,
+      "rpm": null,
+      "efficiency_class": null,
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_cf22ebc25e68",
+      "source_page_or_section": "60Hz Performance table",
+      "source_note": "Motor kW uses normal-efficiency column when two motor efficiency columns are shown.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_4c05c3fa168a",
+      "model_id": "mdl_c9543b78f228",
+      "frequency_hz": 60,
+      "phase": 3,
+      "voltage_v": null,
+      "motor_kw": 8.6,
+      "motor_hp": 11.53,
+      "motor_hp_basis": "converted_from_kW",
+      "max_airflow_m3_min": 6.1,
+      "max_airflow_m3_h": 366.0,
+      "pressure_raw_value": 6000,
+      "pressure_raw_unit": "mmH2O",
+      "discharge_pressure_kpa": 58.84,
+      "vacuum_raw_value": 4500,
+      "vacuum_raw_unit": "mmH2O",
+      "vacuum_kpa": 44.13,
+      "sound_dba": 80,
+      "weight_kg": 86.5,
+      "rpm": null,
+      "efficiency_class": null,
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_cf22ebc25e68",
+      "source_page_or_section": "60Hz Performance table",
+      "source_note": "Motor kW uses normal-efficiency column when two motor efficiency columns are shown.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_1ccba591772b",
+      "model_id": "mdl_b8895bd217ec",
+      "frequency_hz": 60,
+      "phase": 3,
+      "voltage_v": null,
+      "motor_kw": 12.6,
+      "motor_hp": 16.9,
+      "motor_hp_basis": "converted_from_kW",
+      "max_airflow_m3_min": 10,
+      "max_airflow_m3_h": 600,
+      "pressure_raw_value": 6200,
+      "pressure_raw_unit": "mmH2O",
+      "discharge_pressure_kpa": 60.8,
+      "vacuum_raw_value": 4300,
+      "vacuum_raw_unit": "mmH2O",
+      "vacuum_kpa": 42.17,
+      "sound_dba": 82,
+      "weight_kg": 232,
+      "rpm": null,
+      "efficiency_class": null,
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_cf22ebc25e68",
+      "source_page_or_section": "60Hz Performance table",
+      "source_note": "Motor kW uses normal-efficiency column when two motor efficiency columns are shown.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_24ba981a60e5",
+      "model_id": "mdl_21b04b069796",
+      "frequency_hz": 60,
+      "phase": 3,
+      "voltage_v": null,
+      "motor_kw": 17.3,
+      "motor_hp": 23.2,
+      "motor_hp_basis": "converted_from_kW",
+      "max_airflow_m3_min": 10,
+      "max_airflow_m3_h": 600,
+      "pressure_raw_value": 7200,
+      "pressure_raw_unit": "mmH2O",
+      "discharge_pressure_kpa": 70.61,
+      "vacuum_raw_value": 4800,
+      "vacuum_raw_unit": "mmH2O",
+      "vacuum_kpa": 47.07,
+      "sound_dba": 82,
+      "weight_kg": 272,
+      "rpm": null,
+      "efficiency_class": null,
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_cf22ebc25e68",
+      "source_page_or_section": "60Hz Performance table",
+      "source_note": "Motor kW uses normal-efficiency column when two motor efficiency columns are shown.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_d7e3ba4e3d13",
+      "model_id": "mdl_cb1e8577c623",
+      "frequency_hz": 60,
+      "phase": 3,
+      "voltage_v": null,
+      "motor_kw": 12.6,
+      "motor_hp": 16.9,
+      "motor_hp_basis": "converted_from_kW",
+      "max_airflow_m3_min": 17,
+      "max_airflow_m3_h": 1020,
+      "pressure_raw_value": 3000,
+      "pressure_raw_unit": "mmH2O",
+      "discharge_pressure_kpa": 29.42,
+      "vacuum_raw_value": 3000,
+      "vacuum_raw_unit": "mmH2O",
+      "vacuum_kpa": 29.42,
+      "sound_dba": 87,
+      "weight_kg": 263,
+      "rpm": null,
+      "efficiency_class": null,
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_cf22ebc25e68",
+      "source_page_or_section": "60Hz Performance table",
+      "source_note": "Motor kW uses normal-efficiency column when two motor efficiency columns are shown.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_40904caa9aa0",
+      "model_id": "mdl_aa11b76e478d",
+      "frequency_hz": 60,
+      "phase": 3,
+      "voltage_v": null,
+      "motor_kw": 17.3,
+      "motor_hp": 23.2,
+      "motor_hp_basis": "converted_from_kW",
+      "max_airflow_m3_min": 17,
+      "max_airflow_m3_h": 1020,
+      "pressure_raw_value": 4000,
+      "pressure_raw_unit": "mmH2O",
+      "discharge_pressure_kpa": 39.23,
+      "vacuum_raw_value": 3500,
+      "vacuum_raw_unit": "mmH2O",
+      "vacuum_kpa": 34.32,
+      "sound_dba": 87,
+      "weight_kg": 279,
+      "rpm": null,
+      "efficiency_class": null,
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_cf22ebc25e68",
+      "source_page_or_section": "60Hz Performance table",
+      "source_note": "Motor kW uses normal-efficiency column when two motor efficiency columns are shown.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_f21a2c6c7852",
+      "model_id": "mdl_0e8ca0944282",
+      "frequency_hz": 60,
+      "phase": 3,
+      "voltage_v": null,
+      "motor_kw": 15.5,
+      "motor_hp": 20.79,
+      "motor_hp_basis": "converted_from_kW",
+      "max_airflow_m3_min": 22,
+      "max_airflow_m3_h": 1320,
+      "pressure_raw_value": 2500,
+      "pressure_raw_unit": "mmH2O",
+      "discharge_pressure_kpa": 24.52,
+      "vacuum_raw_value": 2700,
+      "vacuum_raw_unit": "mmH2O",
+      "vacuum_kpa": 26.48,
+      "sound_dba": 88,
+      "weight_kg": 353,
+      "rpm": null,
+      "efficiency_class": null,
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_cf22ebc25e68",
+      "source_page_or_section": "60Hz Performance table",
+      "source_note": "Motor kW uses normal-efficiency column when two motor efficiency columns are shown.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_fa7de0627323",
+      "model_id": "mdl_bc9f2c68b8a0",
+      "frequency_hz": 60,
+      "phase": 3,
+      "voltage_v": null,
+      "motor_kw": 18.5,
+      "motor_hp": 24.81,
+      "motor_hp_basis": "converted_from_kW",
+      "max_airflow_m3_min": 22,
+      "max_airflow_m3_h": 1320,
+      "pressure_raw_value": 3500,
+      "pressure_raw_unit": "mmH2O",
+      "discharge_pressure_kpa": 34.32,
+      "vacuum_raw_value": 3000,
+      "vacuum_raw_unit": "mmH2O",
+      "vacuum_kpa": 29.42,
+      "sound_dba": 88,
+      "weight_kg": 363,
+      "rpm": null,
+      "efficiency_class": null,
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_cf22ebc25e68",
+      "source_page_or_section": "60Hz Performance table",
+      "source_note": "Motor kW uses normal-efficiency column when two motor efficiency columns are shown.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_f2f9a68e8235",
+      "model_id": "mdl_07a3c84f8a89",
+      "frequency_hz": 60,
+      "phase": 3,
+      "voltage_v": null,
+      "motor_kw": 17.3,
+      "motor_hp": 23.2,
+      "motor_hp_basis": "converted_from_kW",
+      "max_airflow_m3_min": 40,
+      "max_airflow_m3_h": 2400,
+      "pressure_raw_value": 1200,
+      "pressure_raw_unit": "mmH2O",
+      "discharge_pressure_kpa": 11.77,
+      "vacuum_raw_value": 1300,
+      "vacuum_raw_unit": "mmH2O",
+      "vacuum_kpa": 12.75,
+      "sound_dba": 90,
+      "weight_kg": 434,
+      "rpm": null,
+      "efficiency_class": null,
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_cf22ebc25e68",
+      "source_page_or_section": "60Hz Performance table",
+      "source_note": "Motor kW uses normal-efficiency column when two motor efficiency columns are shown.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_e749a0ad998b",
+      "model_id": "mdl_c63cea10a547",
+      "frequency_hz": 60,
+      "phase": 3,
+      "voltage_v": null,
+      "motor_kw": 22.7,
+      "motor_hp": 30.44,
+      "motor_hp_basis": "converted_from_kW",
+      "max_airflow_m3_min": 40,
+      "max_airflow_m3_h": 2400,
+      "pressure_raw_value": 1800,
+      "pressure_raw_unit": "mmH2O",
+      "discharge_pressure_kpa": 17.65,
+      "vacuum_raw_value": 2000,
+      "vacuum_raw_unit": "mmH2O",
+      "vacuum_kpa": 19.61,
+      "sound_dba": 90,
+      "weight_kg": 450,
+      "rpm": null,
+      "efficiency_class": null,
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_cf22ebc25e68",
+      "source_page_or_section": "60Hz Performance table",
+      "source_note": "Motor kW uses normal-efficiency column when two motor efficiency columns are shown.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_738468c0f86d",
+      "model_id": "mdl_e8d27fe47924",
+      "frequency_hz": 60,
+      "phase": 3,
+      "voltage_v": null,
+      "motor_kw": 9.8,
+      "motor_hp": 13.14,
+      "motor_hp_basis": "converted_from_kW",
+      "max_airflow_m3_min": 17.5,
+      "max_airflow_m3_h": 1050.0,
+      "pressure_raw_value": 120,
+      "pressure_raw_unit": "mbar",
+      "discharge_pressure_kpa": 12.0,
+      "vacuum_raw_value": 150,
+      "vacuum_raw_unit": "mbar",
+      "vacuum_kpa": 15.0,
+      "sound_dba": 78,
+      "weight_kg": 91,
+      "rpm": null,
+      "efficiency_class": null,
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_15a18d35497a",
+      "source_page_or_section": "2SD 840 / 2SD 920 60Hz technical data",
+      "source_note": "Vmax and Δpt max are catalog throttle-curve maximum endpoints; use characteristic curve for actual duty point.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_550e489c1aef",
+      "model_id": "mdl_e8d27fe47924",
+      "frequency_hz": 60,
+      "phase": 3,
+      "voltage_v": null,
+      "motor_kw": 17.3,
+      "motor_hp": 23.2,
+      "motor_hp_basis": "converted_from_kW",
+      "max_airflow_m3_min": 17.5,
+      "max_airflow_m3_h": 1050.0,
+      "pressure_raw_value": 350,
+      "pressure_raw_unit": "mbar",
+      "discharge_pressure_kpa": 35.0,
+      "vacuum_raw_value": 310,
+      "vacuum_raw_unit": "mbar",
+      "vacuum_kpa": 31.0,
+      "sound_dba": 78,
+      "weight_kg": 110,
+      "rpm": null,
+      "efficiency_class": null,
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_15a18d35497a",
+      "source_page_or_section": "2SD 840 / 2SD 920 60Hz technical data",
+      "source_note": "Vmax and Δpt max are catalog throttle-curve maximum endpoints; use characteristic curve for actual duty point.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_77258529b077",
+      "model_id": "mdl_4368ac60b4ca",
+      "frequency_hz": 60,
+      "phase": 3,
+      "voltage_v": null,
+      "motor_kw": 8.6,
+      "motor_hp": 11.53,
+      "motor_hp_basis": "converted_from_kW",
+      "max_airflow_m3_min": 17.5,
+      "max_airflow_m3_h": 1050.0,
+      "pressure_raw_value": 120,
+      "pressure_raw_unit": "mbar",
+      "discharge_pressure_kpa": 12.0,
+      "vacuum_raw_value": 120,
+      "vacuum_raw_unit": "mbar",
+      "vacuum_kpa": 12.0,
+      "sound_dba": 78,
+      "weight_kg": 105,
+      "rpm": null,
+      "efficiency_class": "IE3",
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_15a18d35497a",
+      "source_page_or_section": "2SD 840 / 2SD 920 60Hz technical data",
+      "source_note": "Vmax and Δpt max are catalog throttle-curve maximum endpoints; use characteristic curve for actual duty point.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_37d1c21d8c06",
+      "model_id": "mdl_4368ac60b4ca",
+      "frequency_hz": 60,
+      "phase": 3,
+      "voltage_v": null,
+      "motor_kw": 12.6,
+      "motor_hp": 16.9,
+      "motor_hp_basis": "converted_from_kW",
+      "max_airflow_m3_min": 17.5,
+      "max_airflow_m3_h": 1050.0,
+      "pressure_raw_value": 240,
+      "pressure_raw_unit": "mbar",
+      "discharge_pressure_kpa": 24.0,
+      "vacuum_raw_value": 220,
+      "vacuum_raw_unit": "mbar",
+      "vacuum_kpa": 22.0,
+      "sound_dba": 78,
+      "weight_kg": 137,
+      "rpm": null,
+      "efficiency_class": "IE3",
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_15a18d35497a",
+      "source_page_or_section": "2SD 840 / 2SD 920 60Hz technical data",
+      "source_note": "Vmax and Δpt max are catalog throttle-curve maximum endpoints; use characteristic curve for actual duty point.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_9651361d2845",
+      "model_id": "mdl_e193364d5b91",
+      "frequency_hz": 60,
+      "phase": 3,
+      "voltage_v": null,
+      "motor_kw": 14.5,
+      "motor_hp": 19.44,
+      "motor_hp_basis": "converted_from_kW",
+      "max_airflow_m3_min": 21.83,
+      "max_airflow_m3_h": 1309.8,
+      "pressure_raw_value": 200,
+      "pressure_raw_unit": "mbar",
+      "discharge_pressure_kpa": 20.0,
+      "vacuum_raw_value": 220,
+      "vacuum_raw_unit": "mbar",
+      "vacuum_kpa": 22.0,
+      "sound_dba": 78,
+      "weight_kg": 187,
+      "rpm": null,
+      "efficiency_class": null,
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_15a18d35497a",
+      "source_page_or_section": "2SD 840 / 2SD 920 60Hz technical data",
+      "source_note": "Vmax and Δpt max are catalog throttle-curve maximum endpoints; use characteristic curve for actual duty point.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_d8f6d0a3ae91",
+      "model_id": "mdl_e193364d5b91",
+      "frequency_hz": 60,
+      "phase": 3,
+      "voltage_v": null,
+      "motor_kw": 17.3,
+      "motor_hp": 23.2,
+      "motor_hp_basis": "converted_from_kW",
+      "max_airflow_m3_min": 21.83,
+      "max_airflow_m3_h": 1309.8,
+      "pressure_raw_value": 300,
+      "pressure_raw_unit": "mbar",
+      "discharge_pressure_kpa": 30.0,
+      "vacuum_raw_value": 340,
+      "vacuum_raw_unit": "mbar",
+      "vacuum_kpa": 34.0,
+      "sound_dba": 78,
+      "weight_kg": 197,
+      "rpm": null,
+      "efficiency_class": null,
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_15a18d35497a",
+      "source_page_or_section": "2SD 840 / 2SD 920 60Hz technical data",
+      "source_note": "Vmax and Δpt max are catalog throttle-curve maximum endpoints; use characteristic curve for actual duty point.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_f78a9b31d576",
+      "model_id": "mdl_cb272d954c09",
+      "frequency_hz": 60,
+      "phase": 3,
+      "voltage_v": null,
+      "motor_kw": 12.6,
+      "motor_hp": 16.9,
+      "motor_hp_basis": "converted_from_kW",
+      "max_airflow_m3_min": 21.83,
+      "max_airflow_m3_h": 1309.8,
+      "pressure_raw_value": 190,
+      "pressure_raw_unit": "mbar",
+      "discharge_pressure_kpa": 19.0,
+      "vacuum_raw_value": 220,
+      "vacuum_raw_unit": "mbar",
+      "vacuum_kpa": 22.0,
+      "sound_dba": 78,
+      "weight_kg": 195,
+      "rpm": null,
+      "efficiency_class": "IE3",
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_15a18d35497a",
+      "source_page_or_section": "2SD 840 / 2SD 920 60Hz technical data",
+      "source_note": "Vmax and Δpt max are catalog throttle-curve maximum endpoints; use characteristic curve for actual duty point.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_dce2cfdc6a96",
+      "model_id": "mdl_cb272d954c09",
+      "frequency_hz": 60,
+      "phase": 3,
+      "voltage_v": null,
+      "motor_kw": 17.3,
+      "motor_hp": 23.2,
+      "motor_hp_basis": "converted_from_kW",
+      "max_airflow_m3_min": 21.83,
+      "max_airflow_m3_h": 1309.8,
+      "pressure_raw_value": 320,
+      "pressure_raw_unit": "mbar",
+      "discharge_pressure_kpa": 32.0,
+      "vacuum_raw_value": 390,
+      "vacuum_raw_unit": "mbar",
+      "vacuum_kpa": 39.0,
+      "sound_dba": 78,
+      "weight_kg": 208,
+      "rpm": null,
+      "efficiency_class": "IE3",
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_15a18d35497a",
+      "source_page_or_section": "2SD 840 / 2SD 920 60Hz technical data",
+      "source_note": "Vmax and Δpt max are catalog throttle-curve maximum endpoints; use characteristic curve for actual duty point.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_a6acb03e0f8d",
+      "model_id": "mdl_cb272d954c09",
+      "frequency_hz": 60,
+      "phase": 3,
+      "voltage_v": null,
+      "motor_kw": 21.3,
+      "motor_hp": 28.56,
+      "motor_hp_basis": "converted_from_kW",
+      "max_airflow_m3_min": 21.83,
+      "max_airflow_m3_h": 1309.8,
+      "pressure_raw_value": 430,
+      "pressure_raw_unit": "mbar",
+      "discharge_pressure_kpa": 43.0,
+      "vacuum_raw_value": 460,
+      "vacuum_raw_unit": "mbar",
+      "vacuum_kpa": 46.0,
+      "sound_dba": 78,
+      "weight_kg": 210,
+      "rpm": null,
+      "efficiency_class": "IE3",
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_15a18d35497a",
+      "source_page_or_section": "2SD 840 / 2SD 920 60Hz technical data",
+      "source_note": "Vmax and Δpt max are catalog throttle-curve maximum endpoints; use characteristic curve for actual duty point.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_8454dae70277",
+      "model_id": "mdl_cd80249c9356",
+      "frequency_hz": 60,
+      "phase": 3,
+      "voltage_v": null,
+      "motor_kw": 8.6,
+      "motor_hp": 11.53,
+      "motor_hp_basis": "converted_from_kW",
+      "max_airflow_m3_min": null,
+      "max_airflow_m3_h": null,
+      "pressure_raw_value": null,
+      "pressure_raw_unit": null,
+      "discharge_pressure_kpa": null,
+      "vacuum_raw_value": null,
+      "vacuum_raw_unit": null,
+      "vacuum_kpa": null,
+      "sound_dba": 75,
+      "weight_kg": 128,
+      "rpm": null,
+      "efficiency_class": null,
+      "rated_current_a": null,
+      "data_status": "curve_reference_required",
+      "source_id": "src_90cd07764fc6",
+      "source_page_or_section": "ELMO-G 2BH1 60Hz selection table, curve 44H",
+      "source_note": "Catalog selection table supplies motor/order/sound/weight; actual flow-pressure duty data are represented by performance curve number.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_6b540748c94f",
+      "model_id": "mdl_2d6a005b4f9d",
+      "frequency_hz": 60,
+      "phase": 3,
+      "voltage_v": null,
+      "motor_kw": 11.0,
+      "motor_hp": 14.75,
+      "motor_hp_basis": "converted_from_kW",
+      "max_airflow_m3_min": null,
+      "max_airflow_m3_h": null,
+      "pressure_raw_value": null,
+      "pressure_raw_unit": null,
+      "discharge_pressure_kpa": null,
+      "vacuum_raw_value": null,
+      "vacuum_raw_unit": null,
+      "vacuum_kpa": null,
+      "sound_dba": 80,
+      "weight_kg": 172,
+      "rpm": null,
+      "efficiency_class": null,
+      "rated_current_a": null,
+      "data_status": "curve_reference_required",
+      "source_id": "src_90cd07764fc6",
+      "source_page_or_section": "ELMO-G 2BH1 60Hz selection table, curve 51H",
+      "source_note": "Catalog selection table supplies motor/order/sound/weight; actual flow-pressure duty data are represented by performance curve number.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_a2250c874d94",
+      "model_id": "mdl_c3cb6ffb23fa",
+      "frequency_hz": 60,
+      "phase": 3,
+      "voltage_v": null,
+      "motor_kw": 15.3,
+      "motor_hp": 20.52,
+      "motor_hp_basis": "converted_from_kW",
+      "max_airflow_m3_min": null,
+      "max_airflow_m3_h": null,
+      "pressure_raw_value": null,
+      "pressure_raw_unit": null,
+      "discharge_pressure_kpa": null,
+      "vacuum_raw_value": null,
+      "vacuum_raw_unit": null,
+      "vacuum_kpa": null,
+      "sound_dba": 80,
+      "weight_kg": 191,
+      "rpm": null,
+      "efficiency_class": null,
+      "rated_current_a": null,
+      "data_status": "curve_reference_required",
+      "source_id": "src_90cd07764fc6",
+      "source_page_or_section": "ELMO-G 2BH1 60Hz selection table, curve 52H",
+      "source_note": "Catalog selection table supplies motor/order/sound/weight; actual flow-pressure duty data are represented by performance curve number.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_6a65cc4b06c0",
+      "model_id": "mdl_ca60d678025d",
+      "frequency_hz": 60,
+      "phase": 3,
+      "voltage_v": null,
+      "motor_kw": 12.6,
+      "motor_hp": 16.9,
+      "motor_hp_basis": "converted_from_kW",
+      "max_airflow_m3_min": null,
+      "max_airflow_m3_h": null,
+      "pressure_raw_value": null,
+      "pressure_raw_unit": null,
+      "discharge_pressure_kpa": null,
+      "vacuum_raw_value": null,
+      "vacuum_raw_unit": null,
+      "vacuum_kpa": null,
+      "sound_dba": 79,
+      "weight_kg": 205,
+      "rpm": null,
+      "efficiency_class": null,
+      "rated_current_a": null,
+      "data_status": "curve_reference_required",
+      "source_id": "src_90cd07764fc6",
+      "source_page_or_section": "ELMO-G 2BH1 60Hz selection table, curve 100H",
+      "source_note": "Catalog selection table supplies motor/order/sound/weight; actual flow-pressure duty data are represented by performance curve number.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_1a924e10d646",
+      "model_id": "mdl_4614a106adb8",
+      "frequency_hz": 60,
+      "phase": 3,
+      "voltage_v": null,
+      "motor_kw": 17.3,
+      "motor_hp": 23.2,
+      "motor_hp_basis": "converted_from_kW",
+      "max_airflow_m3_min": null,
+      "max_airflow_m3_h": null,
+      "pressure_raw_value": null,
+      "pressure_raw_unit": null,
+      "discharge_pressure_kpa": null,
+      "vacuum_raw_value": null,
+      "vacuum_raw_unit": null,
+      "vacuum_kpa": null,
+      "sound_dba": 79,
+      "weight_kg": 221,
+      "rpm": null,
+      "efficiency_class": null,
+      "rated_current_a": null,
+      "data_status": "curve_reference_required",
+      "source_id": "src_90cd07764fc6",
+      "source_page_or_section": "ELMO-G 2BH1 60Hz selection table, curve 101H",
+      "source_note": "Catalog selection table supplies motor/order/sound/weight; actual flow-pressure duty data are represented by performance curve number.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_89f146378518",
+      "model_id": "mdl_0df65bdea01e",
+      "frequency_hz": 60,
+      "phase": 3,
+      "voltage_v": null,
+      "motor_kw": 12.6,
+      "motor_hp": 16.9,
+      "motor_hp_basis": "converted_from_kW",
+      "max_airflow_m3_min": null,
+      "max_airflow_m3_h": null,
+      "pressure_raw_value": null,
+      "pressure_raw_unit": null,
+      "discharge_pressure_kpa": null,
+      "vacuum_raw_value": null,
+      "vacuum_raw_unit": null,
+      "vacuum_kpa": null,
+      "sound_dba": 80,
+      "weight_kg": 200,
+      "rpm": null,
+      "efficiency_class": null,
+      "rated_current_a": null,
+      "data_status": "curve_reference_required",
+      "source_id": "src_90cd07764fc6",
+      "source_page_or_section": "ELMO-G 2BH1 60Hz selection table, curve 105H",
+      "source_note": "Catalog selection table supplies motor/order/sound/weight; actual flow-pressure duty data are represented by performance curve number.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_c55f1b2892f7",
+      "model_id": "mdl_d86a915ee263",
+      "frequency_hz": 60,
+      "phase": 3,
+      "voltage_v": null,
+      "motor_kw": 15.5,
+      "motor_hp": 20.79,
+      "motor_hp_basis": "converted_from_kW",
+      "max_airflow_m3_min": null,
+      "max_airflow_m3_h": null,
+      "pressure_raw_value": null,
+      "pressure_raw_unit": null,
+      "discharge_pressure_kpa": null,
+      "vacuum_raw_value": null,
+      "vacuum_raw_unit": null,
+      "vacuum_kpa": null,
+      "sound_dba": 80,
+      "weight_kg": 265,
+      "rpm": null,
+      "efficiency_class": null,
+      "rated_current_a": null,
+      "data_status": "curve_reference_required",
+      "source_id": "src_90cd07764fc6",
+      "source_page_or_section": "ELMO-G 2BH1 60Hz selection table, curve 119H",
+      "source_note": "Catalog selection table supplies motor/order/sound/weight; actual flow-pressure duty data are represented by performance curve number.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_2fadd890cfbc",
+      "model_id": "mdl_cb73bc356987",
+      "frequency_hz": 60,
+      "phase": 3,
+      "voltage_v": null,
+      "motor_kw": 20.0,
+      "motor_hp": 26.82,
+      "motor_hp_basis": "converted_from_kW",
+      "max_airflow_m3_min": null,
+      "max_airflow_m3_h": null,
+      "pressure_raw_value": null,
+      "pressure_raw_unit": null,
+      "discharge_pressure_kpa": null,
+      "vacuum_raw_value": null,
+      "vacuum_raw_unit": null,
+      "vacuum_kpa": null,
+      "sound_dba": 80,
+      "weight_kg": 278,
+      "rpm": null,
+      "efficiency_class": null,
+      "rated_current_a": null,
+      "data_status": "curve_reference_required",
+      "source_id": "src_90cd07764fc6",
+      "source_page_or_section": "ELMO-G 2BH1 60Hz selection table, curve 120H",
+      "source_note": "Catalog selection table supplies motor/order/sound/weight; actual flow-pressure duty data are represented by performance curve number.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_21962047ff0a",
+      "model_id": "mdl_2cc77fb1d794",
+      "frequency_hz": null,
+      "phase": null,
+      "voltage_v": null,
+      "motor_kw": 0.09,
+      "motor_hp": 0.12,
+      "motor_hp_basis": "converted_from_kW",
+      "max_airflow_m3_min": 0.3,
+      "max_airflow_m3_h": 18.0,
+      "pressure_raw_value": 8,
+      "pressure_raw_unit": "kPa",
+      "discharge_pressure_kpa": 8,
+      "vacuum_raw_value": null,
+      "vacuum_raw_unit": null,
+      "vacuum_kpa": null,
+      "sound_dba": 53,
+      "weight_kg": 1.8,
+      "rpm": null,
+      "efficiency_class": null,
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_053e647dc468",
+      "source_page_or_section": "Performance and Specifications",
+      "source_note": "Values are maximum blower performance; motor power is maximum input.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_af263cae1ec8",
+      "model_id": "mdl_1faf81f8b3c6",
+      "frequency_hz": null,
+      "phase": null,
+      "voltage_v": null,
+      "motor_kw": 0.23,
+      "motor_hp": 0.31,
+      "motor_hp_basis": "converted_from_kW",
+      "max_airflow_m3_min": 0.5,
+      "max_airflow_m3_h": 30.0,
+      "pressure_raw_value": 14,
+      "pressure_raw_unit": "kPa",
+      "discharge_pressure_kpa": 14,
+      "vacuum_raw_value": null,
+      "vacuum_raw_unit": null,
+      "vacuum_kpa": null,
+      "sound_dba": 56,
+      "weight_kg": 2.8,
+      "rpm": null,
+      "efficiency_class": null,
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_053e647dc468",
+      "source_page_or_section": "Performance and Specifications",
+      "source_note": "Values are maximum blower performance; motor power is maximum input.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_e89a116a580d",
+      "model_id": "mdl_62f147d6cc4e",
+      "frequency_hz": null,
+      "phase": null,
+      "voltage_v": null,
+      "motor_kw": 0.55,
+      "motor_hp": 0.74,
+      "motor_hp_basis": "converted_from_kW",
+      "max_airflow_m3_min": 0.85,
+      "max_airflow_m3_h": 51.0,
+      "pressure_raw_value": 19,
+      "pressure_raw_unit": "kPa",
+      "discharge_pressure_kpa": 19,
+      "vacuum_raw_value": null,
+      "vacuum_raw_unit": null,
+      "vacuum_kpa": null,
+      "sound_dba": 61,
+      "weight_kg": 4.1,
+      "rpm": null,
+      "efficiency_class": null,
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_053e647dc468",
+      "source_page_or_section": "Performance and Specifications",
+      "source_note": "Values are maximum blower performance; motor power is maximum input.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_5e86ec730586",
+      "model_id": "mdl_1027b5efd44e",
+      "frequency_hz": null,
+      "phase": null,
+      "voltage_v": null,
+      "motor_kw": 0.9,
+      "motor_hp": 1.21,
+      "motor_hp_basis": "converted_from_kW",
+      "max_airflow_m3_min": 1.05,
+      "max_airflow_m3_h": 63.0,
+      "pressure_raw_value": 24,
+      "pressure_raw_unit": "kPa",
+      "discharge_pressure_kpa": 24,
+      "vacuum_raw_value": null,
+      "vacuum_raw_unit": null,
+      "vacuum_kpa": null,
+      "sound_dba": 62,
+      "weight_kg": 6.2,
+      "rpm": null,
+      "efficiency_class": null,
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_053e647dc468",
+      "source_page_or_section": "Performance and Specifications",
+      "source_note": "Values are maximum blower performance; motor power is maximum input.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_5304b0345cd2",
+      "model_id": "mdl_3c78a965a4b9",
+      "frequency_hz": null,
+      "phase": null,
+      "voltage_v": null,
+      "motor_kw": 0.5,
+      "motor_hp": 0.67,
+      "motor_hp_basis": "converted_from_kW",
+      "max_airflow_m3_min": 0.75,
+      "max_airflow_m3_h": 45.0,
+      "pressure_raw_value": 30,
+      "pressure_raw_unit": "kPa",
+      "discharge_pressure_kpa": 30,
+      "vacuum_raw_value": null,
+      "vacuum_raw_unit": null,
+      "vacuum_kpa": null,
+      "sound_dba": null,
+      "weight_kg": 31,
+      "rpm": null,
+      "efficiency_class": null,
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_053e647dc468",
+      "source_page_or_section": "Performance and Specifications",
+      "source_note": "Values are maximum blower performance; motor power is maximum input.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_98f4f6004f55",
+      "model_id": "mdl_ccbe5450e693",
+      "frequency_hz": 60,
+      "phase": null,
+      "voltage_v": null,
+      "motor_kw": 0.23,
+      "motor_hp": 0.31,
+      "motor_hp_basis": "converted_from_kW",
+      "max_airflow_m3_min": 1.0,
+      "max_airflow_m3_h": 60,
+      "pressure_raw_value": 120,
+      "pressure_raw_unit": "mbar",
+      "discharge_pressure_kpa": 12.0,
+      "vacuum_raw_value": null,
+      "vacuum_raw_unit": null,
+      "vacuum_kpa": null,
+      "sound_dba": 53,
+      "weight_kg": 10,
+      "rpm": null,
+      "efficiency_class": null,
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_16036ed63a8e",
+      "source_page_or_section": "p.2-3 60Hz technical data",
+      "source_note": "Outside the user's 10–30 HP target range; retained for manufacturer/family reference.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_db2f048aeb7f",
+      "model_id": "mdl_e34d61322393",
+      "frequency_hz": 60,
+      "phase": null,
+      "voltage_v": null,
+      "motor_kw": 0.29,
+      "motor_hp": 0.39,
+      "motor_hp_basis": "converted_from_kW",
+      "max_airflow_m3_min": 1.6,
+      "max_airflow_m3_h": 96,
+      "pressure_raw_value": 100,
+      "pressure_raw_unit": "mbar",
+      "discharge_pressure_kpa": 10.0,
+      "vacuum_raw_value": null,
+      "vacuum_raw_unit": null,
+      "vacuum_kpa": null,
+      "sound_dba": 55,
+      "weight_kg": 9,
+      "rpm": null,
+      "efficiency_class": null,
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_16036ed63a8e",
+      "source_page_or_section": "p.2-3 60Hz technical data",
+      "source_note": "Outside the user's 10–30 HP target range; retained for manufacturer/family reference.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_342dfa300619",
+      "model_id": "mdl_3a42e37a79b6",
+      "frequency_hz": 60,
+      "phase": null,
+      "voltage_v": null,
+      "motor_kw": 0.5,
+      "motor_hp": 0.67,
+      "motor_hp_basis": "converted_from_kW",
+      "max_airflow_m3_min": 1.6,
+      "max_airflow_m3_h": 96,
+      "pressure_raw_value": 160,
+      "pressure_raw_unit": "mbar",
+      "discharge_pressure_kpa": 16.0,
+      "vacuum_raw_value": null,
+      "vacuum_raw_unit": null,
+      "vacuum_kpa": null,
+      "sound_dba": 60,
+      "weight_kg": 11,
+      "rpm": null,
+      "efficiency_class": null,
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_16036ed63a8e",
+      "source_page_or_section": "p.2-3 60Hz technical data",
+      "source_note": "Outside the user's 10–30 HP target range; retained for manufacturer/family reference.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_58baf3847c3e",
+      "model_id": "mdl_119ddca5921a",
+      "frequency_hz": 60,
+      "phase": null,
+      "voltage_v": null,
+      "motor_kw": 0.83,
+      "motor_hp": 1.11,
+      "motor_hp_basis": "converted_from_kW",
+      "max_airflow_m3_min": 2.917,
+      "max_airflow_m3_h": 175,
+      "pressure_raw_value": 130,
+      "pressure_raw_unit": "mbar",
+      "discharge_pressure_kpa": 13.0,
+      "vacuum_raw_value": null,
+      "vacuum_raw_unit": null,
+      "vacuum_kpa": null,
+      "sound_dba": 64,
+      "weight_kg": 14,
+      "rpm": null,
+      "efficiency_class": null,
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_16036ed63a8e",
+      "source_page_or_section": "p.2-3 60Hz technical data",
+      "source_note": "Outside the user's 10–30 HP target range; retained for manufacturer/family reference.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_1b757c650437",
+      "model_id": "mdl_45df0668ac15",
+      "frequency_hz": 60,
+      "phase": null,
+      "voltage_v": null,
+      "motor_kw": 1.6,
+      "motor_hp": 2.15,
+      "motor_hp_basis": "converted_from_kW",
+      "max_airflow_m3_min": 4.167,
+      "max_airflow_m3_h": 250,
+      "pressure_raw_value": 140,
+      "pressure_raw_unit": "mbar",
+      "discharge_pressure_kpa": 14.0,
+      "vacuum_raw_value": null,
+      "vacuum_raw_unit": null,
+      "vacuum_kpa": null,
+      "sound_dba": 69,
+      "weight_kg": 26,
+      "rpm": null,
+      "efficiency_class": null,
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_16036ed63a8e",
+      "source_page_or_section": "p.2-3 60Hz technical data",
+      "source_note": "Outside the user's 10–30 HP target range; retained for manufacturer/family reference.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_56075e77c243",
+      "model_id": "mdl_99bc28d38ea3",
+      "frequency_hz": 60,
+      "phase": null,
+      "voltage_v": null,
+      "motor_kw": 2.0,
+      "motor_hp": 2.68,
+      "motor_hp_basis": "converted_from_kW",
+      "max_airflow_m3_min": 4.167,
+      "max_airflow_m3_h": 250,
+      "pressure_raw_value": 200,
+      "pressure_raw_unit": "mbar",
+      "discharge_pressure_kpa": 20.0,
+      "vacuum_raw_value": null,
+      "vacuum_raw_unit": null,
+      "vacuum_kpa": null,
+      "sound_dba": 72,
+      "weight_kg": 32,
+      "rpm": null,
+      "efficiency_class": null,
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_16036ed63a8e",
+      "source_page_or_section": "p.2-3 60Hz technical data",
+      "source_note": "Outside the user's 10–30 HP target range; retained for manufacturer/family reference.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_91bd9052b6f5",
+      "model_id": "mdl_d5b9a9a16cec",
+      "frequency_hz": null,
+      "phase": null,
+      "voltage_v": null,
+      "motor_kw": 150,
+      "motor_hp": 201.15,
+      "motor_hp_basis": "converted_from_kW",
+      "max_airflow_m3_min": 120.0,
+      "max_airflow_m3_h": 7200,
+      "pressure_raw_value": 1400,
+      "pressure_raw_unit": "mbar(g)",
+      "discharge_pressure_kpa": 140.0,
+      "vacuum_raw_value": null,
+      "vacuum_raw_unit": null,
+      "vacuum_kpa": null,
+      "sound_dba": 69,
+      "weight_kg": 1535,
+      "rpm": null,
+      "efficiency_class": null,
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_7084b7142480",
+      "source_page_or_section": "p.2 Technical specifications",
+      "source_note": "Far above 10–30 HP target; included as turbo-blower reference.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_5baafc5aa79c",
+      "model_id": "mdl_8c4cebbf81b3",
+      "frequency_hz": null,
+      "phase": null,
+      "voltage_v": null,
+      "motor_kw": 250,
+      "motor_hp": 335.26,
+      "motor_hp_basis": "converted_from_kW",
+      "max_airflow_m3_min": 200.0,
+      "max_airflow_m3_h": 12000,
+      "pressure_raw_value": 1400,
+      "pressure_raw_unit": "mbar(g)",
+      "discharge_pressure_kpa": 140.0,
+      "vacuum_raw_value": null,
+      "vacuum_raw_unit": null,
+      "vacuum_kpa": null,
+      "sound_dba": 74,
+      "weight_kg": 1780,
+      "rpm": null,
+      "efficiency_class": null,
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_7084b7142480",
+      "source_page_or_section": "p.2 Technical specifications",
+      "source_note": "Far above 10–30 HP target; included as turbo-blower reference.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_2bc964a58e76",
+      "model_id": "mdl_beb1f1a09072",
+      "frequency_hz": null,
+      "phase": null,
+      "voltage_v": null,
+      "motor_kw": 400,
+      "motor_hp": 536.41,
+      "motor_hp_basis": "converted_from_kW",
+      "max_airflow_m3_min": 333.33,
+      "max_airflow_m3_h": 20000,
+      "pressure_raw_value": 1400,
+      "pressure_raw_unit": "mbar(g)",
+      "discharge_pressure_kpa": 140.0,
+      "vacuum_raw_value": null,
+      "vacuum_raw_unit": null,
+      "vacuum_kpa": null,
+      "sound_dba": 77,
+      "weight_kg": 2920,
+      "rpm": null,
+      "efficiency_class": null,
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_7084b7142480",
+      "source_page_or_section": "p.2 Technical specifications",
+      "source_note": "Far above 10–30 HP target; included as turbo-blower reference.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_3aef612ac918",
+      "model_id": "mdl_0a52d806b559",
+      "frequency_hz": null,
+      "phase": null,
+      "voltage_v": null,
+      "motor_kw": 150,
+      "motor_hp": 201.15,
+      "motor_hp_basis": "converted_from_kW",
+      "max_airflow_m3_min": 267,
+      "max_airflow_m3_h": 16020,
+      "pressure_raw_value": 1.3,
+      "pressure_raw_unit": "bar differential",
+      "discharge_pressure_kpa": 130.0,
+      "vacuum_raw_value": null,
+      "vacuum_raw_unit": null,
+      "vacuum_kpa": null,
+      "sound_dba": null,
+      "weight_kg": null,
+      "rpm": null,
+      "efficiency_class": null,
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_ae3b2f5ef17e",
+      "source_page_or_section": "cover / application pages",
+      "source_note": "Catalog states 150 kW and 300 kW, flow up to 267 m³/min, pressure differential 0.3–1.3 bar. Outside target.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    },
+    {
+      "id": "var_64f8629327eb",
+      "model_id": "mdl_6184343a9928",
+      "frequency_hz": null,
+      "phase": null,
+      "voltage_v": null,
+      "motor_kw": 300,
+      "motor_hp": 402.31,
+      "motor_hp_basis": "converted_from_kW",
+      "max_airflow_m3_min": 267,
+      "max_airflow_m3_h": 16020,
+      "pressure_raw_value": 1.3,
+      "pressure_raw_unit": "bar differential",
+      "discharge_pressure_kpa": 130.0,
+      "vacuum_raw_value": null,
+      "vacuum_raw_unit": null,
+      "vacuum_kpa": null,
+      "sound_dba": null,
+      "weight_kg": null,
+      "rpm": null,
+      "efficiency_class": null,
+      "rated_current_a": null,
+      "data_status": "catalog_spec",
+      "source_id": "src_ae3b2f5ef17e",
+      "source_page_or_section": "cover / application pages",
+      "source_note": "Catalog states 150 kW and 300 kW, flow up to 267 m³/min, pressure differential 0.3–1.3 bar. Outside target.",
+      "endpoint_warning": true,
+      "needs_curve_verification": true
+    }
+  ],
+  "applications": [
+    {
+      "slug": "plating",
+      "name_ko": "도금/표면처리",
+      "name_en": "Plating & surface treatment",
+      "typical_notes": "도금조 폭기, 세척 후 액 제거, R2R 라인"
+    },
+    {
+      "slug": "air_knife",
+      "name_ko": "에어나이프/블로오프",
+      "name_en": "Air knife / blow-off",
+      "typical_notes": "노즐/슬롯과 P-Q 운전점 동시 검토"
+    },
+    {
+      "slug": "drying",
+      "name_ko": "건조",
+      "name_en": "Drying",
+      "typical_notes": "세척 후 수분/용액 제거"
+    },
+    {
+      "slug": "wash_drying",
+      "name_ko": "세척 후 건조",
+      "name_en": "Post-wash drying",
+      "typical_notes": "클린 에어와 미스트 관리 중요"
+    },
+    {
+      "slug": "tank_aeration",
+      "name_ko": "조 폭기/교반",
+      "name_en": "Tank aeration",
+      "typical_notes": "도금조/수조"
+    },
+    {
+      "slug": "wastewater",
+      "name_ko": "폐수처리 폭기",
+      "name_en": "Wastewater aeration",
+      "typical_notes": "대유량 터보·PD·스크류 적용"
+    },
+    {
+      "slug": "aquaculture",
+      "name_ko": "양식장 폭기",
+      "name_en": "Aquaculture aeration",
+      "typical_notes": "연속운전 신뢰성 중요"
+    },
+    {
+      "slug": "pneumatic_conveying",
+      "name_ko": "공압이송",
+      "name_en": "Pneumatic conveying",
+      "typical_notes": "차압과 가스/분체 특성 검토"
+    },
+    {
+      "slug": "vacuum",
+      "name_ko": "진공/흡입",
+      "name_en": "Vacuum / suction",
+      "typical_notes": "진공도와 흡입 유량 곡선 검토"
+    },
+    {
+      "slug": "vacuum_lifting",
+      "name_ko": "진공리프팅",
+      "name_en": "Vacuum lifting",
+      "typical_notes": "누설량과 안전율 고려"
+    },
+    {
+      "slug": "fermentation",
+      "name_ko": "발효",
+      "name_en": "Fermentation",
+      "typical_notes": "청정/무급유 공기"
+    },
+    {
+      "slug": "combustion_air",
+      "name_ko": "연소공기",
+      "name_en": "Combustion air",
+      "typical_notes": "연속운전·제어성"
+    },
+    {
+      "slug": "process_air",
+      "name_ko": "공정공기",
+      "name_en": "Process air",
+      "typical_notes": "압력·유량 안정성"
+    },
+    {
+      "slug": "semiconductor",
+      "name_ko": "반도체/전자",
+      "name_en": "Semiconductor/electronics",
+      "typical_notes": "청정도·오일프리"
+    },
+    {
+      "slug": "battery",
+      "name_ko": "배터리",
+      "name_en": "Battery manufacturing",
+      "typical_notes": "건조/이송/공정공기"
+    },
+    {
+      "slug": "film_web",
+      "name_ko": "필름/웹 공정",
+      "name_en": "Film/web process",
+      "typical_notes": "에어나이프·건조·장력 영향"
+    }
+  ],
+  "model_applications": [
+    {
+      "model_id": "mdl_b3eda3bf4586",
+      "application_slug": "air_knife",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_b3eda3bf4586",
+      "application_slug": "plating",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_b3eda3bf4586",
+      "application_slug": "wash_drying",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_a1551f777a4f",
+      "application_slug": "air_knife",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_0f64df547635",
+      "application_slug": "air_knife",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_fd718b91fafb",
+      "application_slug": "air_knife",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_fd718b91fafb",
+      "application_slug": "process_air",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_fd718b91fafb",
+      "application_slug": "vacuum",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_4987c4ada618",
+      "application_slug": "air_knife",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_4987c4ada618",
+      "application_slug": "process_air",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_4987c4ada618",
+      "application_slug": "vacuum",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_03bc07ac7069",
+      "application_slug": "air_knife",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_03bc07ac7069",
+      "application_slug": "process_air",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_03bc07ac7069",
+      "application_slug": "vacuum",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_b03eb1c5e2b2",
+      "application_slug": "air_knife",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_b03eb1c5e2b2",
+      "application_slug": "process_air",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_b03eb1c5e2b2",
+      "application_slug": "vacuum",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_1946f678139d",
+      "application_slug": "air_knife",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_1946f678139d",
+      "application_slug": "process_air",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_1946f678139d",
+      "application_slug": "vacuum",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_325343cb359c",
+      "application_slug": "air_knife",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_325343cb359c",
+      "application_slug": "process_air",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_325343cb359c",
+      "application_slug": "vacuum",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_593fe8bd0ec0",
+      "application_slug": "air_knife",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_593fe8bd0ec0",
+      "application_slug": "process_air",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_593fe8bd0ec0",
+      "application_slug": "vacuum",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_a62144baf7ab",
+      "application_slug": "air_knife",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_a62144baf7ab",
+      "application_slug": "process_air",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_a62144baf7ab",
+      "application_slug": "vacuum",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_8a35a719f9c1",
+      "application_slug": "air_knife",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_8a35a719f9c1",
+      "application_slug": "process_air",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_8a35a719f9c1",
+      "application_slug": "vacuum",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_abd3524f42f0",
+      "application_slug": "air_knife",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_abd3524f42f0",
+      "application_slug": "process_air",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_abd3524f42f0",
+      "application_slug": "vacuum",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_f8107898372d",
+      "application_slug": "air_knife",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_f8107898372d",
+      "application_slug": "process_air",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_f8107898372d",
+      "application_slug": "vacuum",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_2aadda9846de",
+      "application_slug": "air_knife",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_2aadda9846de",
+      "application_slug": "process_air",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_2aadda9846de",
+      "application_slug": "vacuum",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_52e3fa7c62c3",
+      "application_slug": "air_knife",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_52e3fa7c62c3",
+      "application_slug": "process_air",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_52e3fa7c62c3",
+      "application_slug": "vacuum",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_6958fd1b7149",
+      "application_slug": "air_knife",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_6958fd1b7149",
+      "application_slug": "process_air",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_6958fd1b7149",
+      "application_slug": "vacuum",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_a44aeea9a12c",
+      "application_slug": "air_knife",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_a44aeea9a12c",
+      "application_slug": "process_air",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_a44aeea9a12c",
+      "application_slug": "vacuum",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_d154b87b5cff",
+      "application_slug": "air_knife",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_d154b87b5cff",
+      "application_slug": "process_air",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_d154b87b5cff",
+      "application_slug": "vacuum",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_6be4f3048770",
+      "application_slug": "air_knife",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_6be4f3048770",
+      "application_slug": "process_air",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_6be4f3048770",
+      "application_slug": "vacuum",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_1b0ddcd4e651",
+      "application_slug": "air_knife",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_1b0ddcd4e651",
+      "application_slug": "process_air",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_1b0ddcd4e651",
+      "application_slug": "vacuum",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_9cb80dff6c76",
+      "application_slug": "air_knife",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_9cb80dff6c76",
+      "application_slug": "process_air",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_9cb80dff6c76",
+      "application_slug": "vacuum",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_bbab5919ca8b",
+      "application_slug": "air_knife",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_bbab5919ca8b",
+      "application_slug": "process_air",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_bbab5919ca8b",
+      "application_slug": "vacuum",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_ba62cb551af3",
+      "application_slug": "air_knife",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_ba62cb551af3",
+      "application_slug": "process_air",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_ba62cb551af3",
+      "application_slug": "vacuum",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_04f7e6a9c5ab",
+      "application_slug": "air_knife",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_04f7e6a9c5ab",
+      "application_slug": "process_air",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_04f7e6a9c5ab",
+      "application_slug": "vacuum",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_4c04905bdc5f",
+      "application_slug": "air_knife",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_4c04905bdc5f",
+      "application_slug": "process_air",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_4c04905bdc5f",
+      "application_slug": "vacuum",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_baa09682ae5d",
+      "application_slug": "air_knife",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_baa09682ae5d",
+      "application_slug": "process_air",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_baa09682ae5d",
+      "application_slug": "vacuum",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_6f8bb0c4ee1b",
+      "application_slug": "air_knife",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_6f8bb0c4ee1b",
+      "application_slug": "process_air",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_6f8bb0c4ee1b",
+      "application_slug": "vacuum",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_f6c1fbdccaec",
+      "application_slug": "air_knife",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_f6c1fbdccaec",
+      "application_slug": "process_air",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_f6c1fbdccaec",
+      "application_slug": "vacuum",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_25be565ba385",
+      "application_slug": "air_knife",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_25be565ba385",
+      "application_slug": "process_air",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_25be565ba385",
+      "application_slug": "vacuum",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_e2801e2725cb",
+      "application_slug": "air_knife",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_e2801e2725cb",
+      "application_slug": "process_air",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_e2801e2725cb",
+      "application_slug": "vacuum",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_59161914f77b",
+      "application_slug": "air_knife",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_59161914f77b",
+      "application_slug": "process_air",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_59161914f77b",
+      "application_slug": "vacuum",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_fb26477e0206",
+      "application_slug": "air_knife",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_fb26477e0206",
+      "application_slug": "process_air",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_fb26477e0206",
+      "application_slug": "vacuum",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_ad1c407eb42a",
+      "application_slug": "air_knife",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_ad1c407eb42a",
+      "application_slug": "process_air",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_ad1c407eb42a",
+      "application_slug": "vacuum",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_86f873595a82",
+      "application_slug": "air_knife",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_86f873595a82",
+      "application_slug": "process_air",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_86f873595a82",
+      "application_slug": "vacuum",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_86ef81eb77b5",
+      "application_slug": "air_knife",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_86ef81eb77b5",
+      "application_slug": "process_air",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_86ef81eb77b5",
+      "application_slug": "vacuum",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_030c69067bd5",
+      "application_slug": "air_knife",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_030c69067bd5",
+      "application_slug": "process_air",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_030c69067bd5",
+      "application_slug": "vacuum",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_4f867923a475",
+      "application_slug": "air_knife",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_4f867923a475",
+      "application_slug": "process_air",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_4f867923a475",
+      "application_slug": "vacuum",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_c9543b78f228",
+      "application_slug": "air_knife",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_c9543b78f228",
+      "application_slug": "process_air",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_c9543b78f228",
+      "application_slug": "vacuum",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_b8895bd217ec",
+      "application_slug": "air_knife",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_b8895bd217ec",
+      "application_slug": "process_air",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_b8895bd217ec",
+      "application_slug": "vacuum",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_21b04b069796",
+      "application_slug": "air_knife",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_21b04b069796",
+      "application_slug": "process_air",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_21b04b069796",
+      "application_slug": "vacuum",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_cb1e8577c623",
+      "application_slug": "air_knife",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_cb1e8577c623",
+      "application_slug": "process_air",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_cb1e8577c623",
+      "application_slug": "vacuum",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_aa11b76e478d",
+      "application_slug": "air_knife",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_aa11b76e478d",
+      "application_slug": "process_air",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_aa11b76e478d",
+      "application_slug": "vacuum",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_0e8ca0944282",
+      "application_slug": "air_knife",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_0e8ca0944282",
+      "application_slug": "process_air",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_0e8ca0944282",
+      "application_slug": "vacuum",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_bc9f2c68b8a0",
+      "application_slug": "air_knife",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_bc9f2c68b8a0",
+      "application_slug": "process_air",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_bc9f2c68b8a0",
+      "application_slug": "vacuum",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_07a3c84f8a89",
+      "application_slug": "air_knife",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_07a3c84f8a89",
+      "application_slug": "process_air",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_07a3c84f8a89",
+      "application_slug": "vacuum",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_c63cea10a547",
+      "application_slug": "air_knife",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_c63cea10a547",
+      "application_slug": "process_air",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_c63cea10a547",
+      "application_slug": "vacuum",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_e8d27fe47924",
+      "application_slug": "drying",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_e8d27fe47924",
+      "application_slug": "tank_aeration",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_e8d27fe47924",
+      "application_slug": "process_air",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_e8d27fe47924",
+      "application_slug": "vacuum",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_4368ac60b4ca",
+      "application_slug": "drying",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_4368ac60b4ca",
+      "application_slug": "tank_aeration",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_4368ac60b4ca",
+      "application_slug": "process_air",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_4368ac60b4ca",
+      "application_slug": "vacuum",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_e193364d5b91",
+      "application_slug": "drying",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_e193364d5b91",
+      "application_slug": "tank_aeration",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_e193364d5b91",
+      "application_slug": "process_air",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_e193364d5b91",
+      "application_slug": "vacuum",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_cb272d954c09",
+      "application_slug": "drying",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_cb272d954c09",
+      "application_slug": "tank_aeration",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_cb272d954c09",
+      "application_slug": "process_air",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_cb272d954c09",
+      "application_slug": "vacuum",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_cd80249c9356",
+      "application_slug": "process_air",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_cd80249c9356",
+      "application_slug": "vacuum",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_2d6a005b4f9d",
+      "application_slug": "process_air",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_2d6a005b4f9d",
+      "application_slug": "vacuum",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_c3cb6ffb23fa",
+      "application_slug": "process_air",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_c3cb6ffb23fa",
+      "application_slug": "vacuum",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_ca60d678025d",
+      "application_slug": "process_air",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_ca60d678025d",
+      "application_slug": "vacuum",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_4614a106adb8",
+      "application_slug": "process_air",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_4614a106adb8",
+      "application_slug": "vacuum",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_0df65bdea01e",
+      "application_slug": "process_air",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_0df65bdea01e",
+      "application_slug": "vacuum",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_d86a915ee263",
+      "application_slug": "process_air",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_d86a915ee263",
+      "application_slug": "vacuum",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_cb73bc356987",
+      "application_slug": "process_air",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_cb73bc356987",
+      "application_slug": "vacuum",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_2cc77fb1d794",
+      "application_slug": "process_air",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_1faf81f8b3c6",
+      "application_slug": "process_air",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_62f147d6cc4e",
+      "application_slug": "process_air",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_1027b5efd44e",
+      "application_slug": "process_air",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_3c78a965a4b9",
+      "application_slug": "process_air",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_ccbe5450e693",
+      "application_slug": "process_air",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_ccbe5450e693",
+      "application_slug": "vacuum",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_e34d61322393",
+      "application_slug": "process_air",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_e34d61322393",
+      "application_slug": "vacuum",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_3a42e37a79b6",
+      "application_slug": "process_air",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_3a42e37a79b6",
+      "application_slug": "vacuum",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_119ddca5921a",
+      "application_slug": "process_air",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_119ddca5921a",
+      "application_slug": "vacuum",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_45df0668ac15",
+      "application_slug": "process_air",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_45df0668ac15",
+      "application_slug": "vacuum",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_99bc28d38ea3",
+      "application_slug": "process_air",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_99bc28d38ea3",
+      "application_slug": "vacuum",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_d5b9a9a16cec",
+      "application_slug": "fermentation",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_d5b9a9a16cec",
+      "application_slug": "pneumatic_conveying",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_d5b9a9a16cec",
+      "application_slug": "wastewater",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_8c4cebbf81b3",
+      "application_slug": "fermentation",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_8c4cebbf81b3",
+      "application_slug": "pneumatic_conveying",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_8c4cebbf81b3",
+      "application_slug": "wastewater",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_beb1f1a09072",
+      "application_slug": "fermentation",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_beb1f1a09072",
+      "application_slug": "pneumatic_conveying",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_beb1f1a09072",
+      "application_slug": "wastewater",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_0a52d806b559",
+      "application_slug": "air_knife",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_0a52d806b559",
+      "application_slug": "fermentation",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_0a52d806b559",
+      "application_slug": "process_air",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_6184343a9928",
+      "application_slug": "air_knife",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_6184343a9928",
+      "application_slug": "fermentation",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    },
+    {
+      "model_id": "mdl_6184343a9928",
+      "application_slug": "process_air",
+      "fit_basis": "catalog_tag_or_existing_dataset"
+    }
+  ],
+  "suppliers": [
+    {
+      "id": "sup_f88bda3302ab",
+      "name": "황해전기",
+      "supplier_type": "manufacturer_direct",
+      "manufacturer_id": "mfr_a3b6899056e8",
+      "related_manufacturer_name": "Hwanghae Electric / 황해전기",
+      "country": "Korea",
+      "region": "인천",
+      "address": "인천광역시 남동구 남동서로 141",
+      "phone": "1577-2673 / 032-817-2671~3",
+      "email": "webmaster@hhblower.co.kr",
+      "website": "https://www.hhblower.co.kr/",
+      "services": [
+        "sales",
+        "parts",
+        "technical_support"
+      ],
+      "relationship_status": "manufacturer_direct",
+      "quote_mode": "RFQ_or_contact",
+      "public_price_available": false,
+      "verified_at": "2026-09-24",
+      "source_url": "https://www.hhblower.co.kr/"
+    },
+    {
+      "id": "sup_eca03721c687",
+      "name": "대하이엔지",
+      "supplier_type": "manufacturer_direct",
+      "manufacturer_id": "mfr_423d222e2a73",
+      "related_manufacturer_name": "DAEHA ENG Co., Ltd. / 대하이엔지",
+      "country": "Korea",
+      "region": "경기 김포",
+      "address": "경기 김포시 하성면 월하로671번길 23-28",
+      "phone": "031-985-5985",
+      "email": "dhb@turboair.net",
+      "website": "https://turboair.net/",
+      "services": [
+        "sales",
+        "technical_support"
+      ],
+      "relationship_status": "manufacturer_direct",
+      "quote_mode": "RFQ_or_contact",
+      "public_price_available": false,
+      "verified_at": "2026-09-24",
+      "source_url": "https://turboair.net/shopinfo/location.html"
+    },
+    {
+      "id": "sup_1783486bca9b",
+      "name": "세종씨아이",
+      "supplier_type": "manufacturer_direct",
+      "manufacturer_id": "mfr_a59c672e4083",
+      "related_manufacturer_name": "세종씨아이",
+      "country": "Korea",
+      "region": "경기 양주",
+      "address": "경기도 양주시 광적면 그루고개로188번길 7-51",
+      "phone": "031-876-7780",
+      "email": "jhpark@sejongci.com",
+      "website": "https://www.sejongci.com/",
+      "services": [
+        "sales",
+        "custom_build",
+        "parts"
+      ],
+      "relationship_status": "manufacturer_direct",
+      "quote_mode": "RFQ_or_contact",
+      "public_price_available": false,
+      "verified_at": "2026-09-24",
+      "source_url": "https://www.sejongci.com/CUSTROMRINGBLOWERS"
+    },
+    {
+      "id": "sup_41796ddb222a",
+      "name": "TNE",
+      "supplier_type": "manufacturer_direct",
+      "manufacturer_id": "mfr_1c2eca50a004",
+      "related_manufacturer_name": "TNE / 티앤이",
+      "country": "Korea",
+      "region": "충북 청주 오송",
+      "address": "충청북도 청주시 흥덕구 오송읍 오송생명9로 192",
+      "phone": "043-900-9982",
+      "email": "domestic@tnekorea.co.kr",
+      "website": "https://www.tnekorea.com/",
+      "services": [
+        "sales",
+        "service",
+        "performance_test"
+      ],
+      "relationship_status": "manufacturer_direct",
+      "quote_mode": "RFQ_or_contact",
+      "public_price_available": false,
+      "verified_at": "2026-09-24",
+      "source_url": "https://www.tnekorea.com/contact-us"
+    },
+    {
+      "id": "sup_66b12be2799c",
+      "name": "한국유체기계",
+      "supplier_type": "manufacturer_direct",
+      "manufacturer_id": "mfr_37151488c13c",
+      "related_manufacturer_name": "한국유체기계",
+      "country": "Korea",
+      "region": "부산",
+      "address": "부산광역시 사상구 가야대로213번길 14",
+      "phone": "051-264-3370",
+      "email": "chlee4080@hanmail.net",
+      "website": "https://www.kfmblower.kr/",
+      "services": [
+        "sales",
+        "service"
+      ],
+      "relationship_status": "manufacturer_direct",
+      "quote_mode": "RFQ_or_contact",
+      "public_price_available": false,
+      "verified_at": "2026-09-24",
+      "source_url": "https://kfmblower.kr/g5/sub/product_01.php"
+    },
+    {
+      "id": "sup_819d9924621a",
+      "name": "NS / 앤에스",
+      "supplier_type": "manufacturer_direct",
+      "manufacturer_id": "mfr_b8aeb27d77bd",
+      "related_manufacturer_name": "NS / 앤에스 (Neuros 계열/브랜드 자료 포함)",
+      "country": "Korea",
+      "region": "대전",
+      "address": "대전광역시 유성구 테크노2로 274",
+      "phone": "+82-42-865-7300",
+      "email": "sales@nskor.com",
+      "website": "https://www.nskor.com/",
+      "services": [
+        "sales",
+        "service",
+        "partners"
+      ],
+      "relationship_status": "manufacturer_direct",
+      "quote_mode": "RFQ_or_contact",
+      "public_price_available": false,
+      "verified_at": "2026-09-24",
+      "source_url": "https://www.nskor.com/ns/company/contact-us"
+    },
+    {
+      "id": "sup_5852f36e5572",
+      "name": "Aerzen Turbo Co., Ltd.",
+      "supplier_type": "official_korea_manufacturing",
+      "manufacturer_id": "mfr_86214db95c88",
+      "related_manufacturer_name": "Aerzen Turbo Co., Ltd. / AERZEN",
+      "country": "Korea",
+      "region": "충북 청주 오송",
+      "address": "800 Jeongjung-ri, Osong-eup, Heungdeok-gu, Cheongju-si",
+      "phone": "+82-43-238-6500",
+      "email": "sales@aerzen-turbo.com",
+      "website": "https://www.aerzen.com/",
+      "services": [
+        "sales",
+        "service",
+        "manufacturing"
+      ],
+      "relationship_status": "official_korea_company",
+      "quote_mode": "RFQ_or_contact",
+      "public_price_available": false,
+      "verified_at": "2026-09-24",
+      "source_url": "https://www.aerzen.com/company/worldwide/company-profile-aerzen-turbo"
+    },
+    {
+      "id": "sup_e69c74acb69d",
+      "name": "부쉬코리아",
+      "supplier_type": "official_korea_office",
+      "manufacturer_id": "mfr_d8b3a8535101",
+      "related_manufacturer_name": "Busch Vacuum Solutions",
+      "country": "Korea",
+      "region": "경기 이천",
+      "address": "경기도 이천시 마장면 서이천로 189-51",
+      "phone": "+82-31-645-2700",
+      "email": "busch@busch.co.kr",
+      "website": "https://www.buschvacuum.com/kr/ko/",
+      "services": [
+        "sales",
+        "service",
+        "parts"
+      ],
+      "relationship_status": "official_korea_office",
+      "quote_mode": "RFQ_or_contact",
+      "public_price_available": false,
+      "verified_at": "2026-09-24",
+      "source_url": "https://www.buschvacuum.com/kr/ko/company/busch-kr/"
+    },
+    {
+      "id": "sup_1838e08175e3",
+      "name": "Atlas Copco Korea - Compressor Technique",
+      "supplier_type": "official_korea_office",
+      "manufacturer_id": "mfr_8c8d5c5a57c9",
+      "related_manufacturer_name": "Atlas Copco",
+      "country": "Korea",
+      "region": "경기 성남",
+      "address": "경기도 성남시 분당구 판교역로192번길 14-1",
+      "phone": "+82-31-620-0600",
+      "email": "aga.korea@atlascopco.com",
+      "website": "https://www.atlascopco.com/ko-kr/",
+      "services": [
+        "sales",
+        "service",
+        "parts",
+        "24h_service"
+      ],
+      "relationship_status": "official_korea_office",
+      "quote_mode": "RFQ_or_contact",
+      "public_price_available": false,
+      "verified_at": "2026-09-24",
+      "source_url": "https://www.atlascopco.com/ko-kr/Contact"
+    },
+    {
+      "id": "sup_ff0f821abe6a",
+      "name": "KAESER KOMPRESSOREN Korea",
+      "supplier_type": "official_korea_office",
+      "manufacturer_id": "mfr_6775635143a5",
+      "related_manufacturer_name": "KAESER KOMPRESSOREN",
+      "country": "Korea",
+      "region": "경기 평택",
+      "address": "경기도 평택시 청북읍 현곡산단로 22",
+      "phone": "+82-31-682-6384",
+      "email": "info.korea@kaeser.com",
+      "website": "https://kr.kaeser.com/",
+      "services": [
+        "sales",
+        "service",
+        "parts"
+      ],
+      "relationship_status": "official_korea_office",
+      "quote_mode": "RFQ_or_contact",
+      "public_price_available": false,
+      "verified_at": "2026-09-24",
+      "source_url": "https://kr.kaeser.com/services/contact/locations/"
+    },
+    {
+      "id": "sup_42e7dd6416a5",
+      "name": "Fuji Electric Korea",
+      "supplier_type": "official_korea_office",
+      "manufacturer_id": "mfr_a25efc885f85",
+      "related_manufacturer_name": "Fuji Electric",
+      "country": "Korea",
+      "region": "서울",
+      "address": "서울특별시 영등포구 여의나루로 67, 16층",
+      "phone": "02-780-5011",
+      "email": null,
+      "website": "https://fujielectric.co.kr/",
+      "services": [
+        "sales",
+        "agency_network",
+        "technical_support"
+      ],
+      "relationship_status": "official_korea_office",
+      "quote_mode": "RFQ_or_contact",
+      "public_price_available": false,
+      "verified_at": "2026-09-24",
+      "source_url": "https://fujielectric.co.kr/company/location"
+    },
+    {
+      "id": "sup_d4f16233b3fc",
+      "name": "Elmo Rietschle Korea web contact",
+      "supplier_type": "official_contact_form",
+      "manufacturer_id": "mfr_66945d65e7d3",
+      "related_manufacturer_name": "Elmo Rietschle",
+      "country": "Korea",
+      "region": "Korea web",
+      "address": null,
+      "phone": null,
+      "email": null,
+      "website": "https://www.elmorietschle.com/ko-kr/contact/",
+      "services": [
+        "quote",
+        "service_request"
+      ],
+      "relationship_status": "official_contact_form",
+      "quote_mode": "RFQ_or_contact",
+      "public_price_available": false,
+      "verified_at": "2026-09-24",
+      "source_url": "https://www.elmorietschle.com/ko-kr/contact/"
+    },
+    {
+      "id": "sup_fb89739cf41e",
+      "name": "Gardner Denver Korea web contact",
+      "supplier_type": "official_contact_form",
+      "manufacturer_id": "mfr_8f8850c0e786",
+      "related_manufacturer_name": "Gardner Denver",
+      "country": "Korea",
+      "region": "Korea web",
+      "address": null,
+      "phone": null,
+      "email": null,
+      "website": "https://www.gardnerdenver.com/ko-kr/contact/",
+      "services": [
+        "quote",
+        "service_request"
+      ],
+      "relationship_status": "official_contact_form",
+      "quote_mode": "RFQ_or_contact",
+      "public_price_available": false,
+      "verified_at": "2026-09-24",
+      "source_url": "https://www.gardnerdenver.com/ko-kr/contact/"
+    },
+    {
+      "id": "sup_4b6a2cbeb9e2",
+      "name": "Namwon Turbo One",
+      "supplier_type": "manufacturer_direct_profile",
+      "manufacturer_id": "mfr_9a7e2e4f5a3f",
+      "related_manufacturer_name": "Namwon Turbo One / 남원터보원",
+      "country": "Korea",
+      "region": "Korea",
+      "address": null,
+      "phone": "+82-62-225-9181",
+      "email": "nwturboone@hanmail.net",
+      "website": "http://www.nwturbo.com/",
+      "services": [
+        "sales"
+      ],
+      "relationship_status": "manufacturer_direct_secondary_evidence",
+      "quote_mode": "RFQ_or_contact",
+      "public_price_available": false,
+      "verified_at": "2026-09-24",
+      "source_url": "https://nwturbo.gobizkorea.com/mini/site/miniSiteMain.do?domn_id=nwturbo"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src_712c60a6320f",
+      "title": "Besla_BlowerFilter_Catalog.pdf",
+      "source_type": "uploaded_catalog_or_user_source",
+      "url": null,
+      "file_name": "Besla_BlowerFilter_Catalog.pdf",
+      "officiality": "unknown_or_uploaded",
+      "verified_at": "2026-09-24"
+    },
+    {
+      "id": "src_3b2ea290c685",
+      "title": "user supplied IHB performance/specification image",
+      "source_type": "uploaded_catalog_or_user_source",
+      "url": null,
+      "file_name": null,
+      "officiality": "unknown_or_uploaded",
+      "verified_at": "2026-09-24"
+    },
+    {
+      "id": "src_6f6d6d2f6796",
+      "title": "2023황해전기링블러거_카다로그_ 최종20230905.pdf",
+      "source_type": "uploaded_catalog_or_user_source",
+      "url": null,
+      "file_name": "2023황해전기링블러거_카다로그_ 최종20230905.pdf",
+      "officiality": "unknown_or_uploaded",
+      "verified_at": "2026-09-24"
+    },
+    {
+      "id": "src_cf22ebc25e68",
+      "title": "대하이엔지_카달로그.pdf",
+      "source_type": "uploaded_catalog_or_user_source",
+      "url": null,
+      "file_name": "대하이엔지_카달로그.pdf",
+      "officiality": "unknown_or_uploaded",
+      "verified_at": "2026-09-24"
+    },
+    {
+      "id": "src_15a18d35497a",
+      "title": "9703404_1SD_2SD_DE_EN.pdf",
+      "source_type": "uploaded_catalog_or_user_source",
+      "url": null,
+      "file_name": "9703404_1SD_2SD_DE_EN.pdf",
+      "officiality": "unknown_or_uploaded",
+      "verified_at": "2026-09-24"
+    },
+    {
+      "id": "src_90cd07764fc6",
+      "title": "SIEMENS ELMO VACUUM PUMPS AND COMPRESSORS CATALOGUE.pdf",
+      "source_type": "uploaded_catalog_or_user_source",
+      "url": null,
+      "file_name": "SIEMENS ELMO VACUUM PUMPS AND COMPRESSORS CATALOGUE.pdf",
+      "officiality": "unknown_or_uploaded",
+      "verified_at": "2026-09-24"
+    },
+    {
+      "id": "src_053e647dc468",
+      "title": "소형고속블로워 카다로그.pdf",
+      "source_type": "uploaded_catalog_or_user_source",
+      "url": null,
+      "file_name": "소형고속블로워 카다로그.pdf",
+      "officiality": "unknown_or_uploaded",
+      "verified_at": "2026-09-24"
+    },
+    {
+      "id": "src_16036ed63a8e",
+      "title": "Product Leaflet SAMOS SB 0050–0200 D0_Korea_Web_ko.pdf",
+      "source_type": "uploaded_catalog_or_user_source",
+      "url": null,
+      "file_name": "Product Leaflet SAMOS SB 0050–0200 D0_Korea_Web_ko.pdf",
+      "officiality": "unknown_or_uploaded",
+      "verified_at": "2026-09-24"
+    },
+    {
+      "id": "src_7084b7142480",
+      "title": "AtlasCopco_ZB 5_6_7 VSD+_Sales_Leaflet_ENG_0012020004_LR.pdf",
+      "source_type": "uploaded_catalog_or_user_source",
+      "url": null,
+      "file_name": "AtlasCopco_ZB 5_6_7 VSD+_Sales_Leaflet_ENG_0012020004_LR.pdf",
+      "officiality": "unknown_or_uploaded",
+      "verified_at": "2026-09-24"
+    },
+    {
+      "id": "src_ae3b2f5ef17e",
+      "title": "document_o538df9h0d2gd9ofpr0iibf35q.pdf",
+      "source_type": "uploaded_catalog_or_user_source",
+      "url": null,
+      "file_name": "document_o538df9h0d2gd9ofpr0iibf35q.pdf",
+      "officiality": "unknown_or_uploaded",
+      "verified_at": "2026-09-24"
+    },
+    {
+      "id": "src_0eed8916a6e0",
+      "title": "황해전기 공식 링블로워 요약",
+      "source_type": "web",
+      "url": "https://hhblower.co.kr/product/ring_blower/summary.php",
+      "file_name": null,
+      "officiality": "official_current_web",
+      "verified_at": "2026-09-24"
+    },
+    {
+      "id": "src_4984bb175fba",
+      "title": "대하이엔지 사업장 소개",
+      "source_type": "web",
+      "url": "https://turboair.net/shopinfo/location.html",
+      "file_name": null,
+      "officiality": "official_current_web",
+      "verified_at": "2026-09-24"
+    },
+    {
+      "id": "src_2c7d8f5e8fce",
+      "title": "세종씨아이 링블로워",
+      "source_type": "web",
+      "url": "https://www.sejongci.com/CUSTROMRINGBLOWERS",
+      "file_name": null,
+      "officiality": "official_current_web",
+      "verified_at": "2026-09-24"
+    },
+    {
+      "id": "src_b2e89c4bbcf2",
+      "title": "TNE 공기베어링 터보블로워",
+      "source_type": "web",
+      "url": "https://www.tnekorea.com/turboblower",
+      "file_name": null,
+      "officiality": "official_current_web",
+      "verified_at": "2026-09-24"
+    },
+    {
+      "id": "src_407f71dff8af",
+      "title": "TNE 연락처",
+      "source_type": "web",
+      "url": "https://www.tnekorea.com/contact-us",
+      "file_name": null,
+      "officiality": "official_current_web",
+      "verified_at": "2026-09-24"
+    },
+    {
+      "id": "src_8ea0b20c7fc2",
+      "title": "한국유체기계 로터리 블로워",
+      "source_type": "web",
+      "url": "https://kfmblower.kr/g5/sub/product_01.php",
+      "file_name": null,
+      "officiality": "official_current_web",
+      "verified_at": "2026-09-24"
+    },
+    {
+      "id": "src_5f98e551e378",
+      "title": "NS 연락처",
+      "source_type": "web",
+      "url": "https://www.nskor.com/ns/company/contact-us",
+      "file_name": null,
+      "officiality": "official_current_web",
+      "verified_at": "2026-09-24"
+    },
+    {
+      "id": "src_3df7b095f388",
+      "title": "AERZEN Turbo Korea",
+      "source_type": "web",
+      "url": "https://www.aerzen.com/company/worldwide/company-profile-aerzen-turbo",
+      "file_name": null,
+      "officiality": "official_current_web",
+      "verified_at": "2026-09-24"
+    },
+    {
+      "id": "src_db2ec463afde",
+      "title": "Busch Korea",
+      "source_type": "web",
+      "url": "https://www.buschvacuum.com/kr/ko/company/busch-kr/",
+      "file_name": null,
+      "officiality": "official_current_web",
+      "verified_at": "2026-09-24"
+    },
+    {
+      "id": "src_ff7868437e76",
+      "title": "Atlas Copco Korea blower",
+      "source_type": "web",
+      "url": "https://www.atlascopco.com/ko-kr/compressors/products/air-blowers",
+      "file_name": null,
+      "officiality": "official_current_web",
+      "verified_at": "2026-09-24"
+    },
+    {
+      "id": "src_f32c131f7762",
+      "title": "Atlas Copco Korea contact",
+      "source_type": "web",
+      "url": "https://www.atlascopco.com/ko-kr/Contact",
+      "file_name": null,
+      "officiality": "official_current_web",
+      "verified_at": "2026-09-24"
+    },
+    {
+      "id": "src_99116f0b6c96",
+      "title": "KAESER Korea contact",
+      "source_type": "web",
+      "url": "https://kr.kaeser.com/services/contact/locations/",
+      "file_name": null,
+      "officiality": "official_current_web",
+      "verified_at": "2026-09-24"
+    },
+    {
+      "id": "src_fcbfcd410154",
+      "title": "Fuji Electric Korea",
+      "source_type": "web",
+      "url": "https://fujielectric.co.kr/",
+      "file_name": null,
+      "officiality": "official_current_web",
+      "verified_at": "2026-09-24"
+    },
+    {
+      "id": "src_c5abc6d445ad",
+      "title": "Elmo Rietschle current products",
+      "source_type": "web",
+      "url": "https://www.elmorietschle.com/ko-kr/products/",
+      "file_name": null,
+      "officiality": "official_current_web",
+      "verified_at": "2026-09-24"
+    },
+    {
+      "id": "src_e3f6935941df",
+      "title": "Elmo Rietschle contact",
+      "source_type": "web",
+      "url": "https://www.elmorietschle.com/ko-kr/contact/",
+      "file_name": null,
+      "officiality": "official_current_web",
+      "verified_at": "2026-09-24"
+    },
+    {
+      "id": "src_441b078cda3c",
+      "title": "Gardner Denver contact",
+      "source_type": "web",
+      "url": "https://www.gardnerdenver.com/ko-kr/contact/",
+      "file_name": null,
+      "officiality": "official_current_web",
+      "verified_at": "2026-09-24"
+    },
+    {
+      "id": "src_8b4349ff6f8e",
+      "title": "Namwon Turbo One profile",
+      "source_type": "web",
+      "url": "https://nwturbo.gobizkorea.com/mini/site/miniSiteMain.do?domn_id=nwturbo",
+      "file_name": null,
+      "officiality": "secondary_verified_profile",
+      "verified_at": "2026-09-24"
+    },
+    {
+      "id": "src_0ca735669ce2",
+      "title": "TurboMAX brochure",
+      "source_type": "web",
+      "url": "https://www.tkcneotech.com/wp-content/uploads/2022/12/TurboMAX-Brochure.pdf",
+      "file_name": null,
+      "officiality": "official_or_brand_brochure",
+      "verified_at": "2026-09-24"
+    },
+    {
+      "id": "src_db9c33fb7aca",
+      "title": "K-TURBO brochure",
+      "source_type": "web",
+      "url": "https://www.k-turbo.com/kr/Public/Home/all/img/1.pdf",
+      "file_name": null,
+      "officiality": "official_brand_pdf",
+      "verified_at": "2026-09-24"
+    }
+  ]
+}
