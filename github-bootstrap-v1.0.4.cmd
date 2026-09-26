@@ -21,7 +21,7 @@ set "DEPLOY_OK=0"
 
 echo.
 echo ============================================================
-echo  BlowerFit KR - GitHub Bootstrap v1.0.3
+echo  BlowerFit KR - GitHub Bootstrap v1.0.4
 echo ============================================================
 echo  Project: %CD%
 echo.
@@ -176,6 +176,51 @@ if not defined CURRENT_ORIGIN (
 )
 
 echo.
+echo [CHECK] Synchronize existing remote branch
+set "REMOTE_MAIN_EXISTS=0"
+git ls-remote --exit-code --heads origin "refs/heads/%DEFAULT_BRANCH%" >nul 2>&1
+if not errorlevel 1 set "REMOTE_MAIN_EXISTS=1"
+
+if "!REMOTE_MAIN_EXISTS!"=="1" (
+  echo [INFO] Remote %DEFAULT_BRANCH% exists. Fetching it before creating the update commit.
+  git fetch origin "%DEFAULT_BRANCH%" --prune
+  if errorlevel 1 (
+    echo [ERROR] Could not fetch origin/%DEFAULT_BRANCH%.
+    goto :fatal
+  )
+
+  git rev-parse --verify HEAD >nul 2>&1
+  if errorlevel 1 (
+    echo [INFO] Local repository has no commit yet. Using origin/%DEFAULT_BRANCH% as the base.
+    git reset --mixed "origin/%DEFAULT_BRANCH%"
+    if errorlevel 1 goto :git_error
+  ) else (
+    git merge-base HEAD "origin/%DEFAULT_BRANCH%" >nul 2>&1
+    if errorlevel 1 (
+      echo [WARN] Local and remote histories are unrelated.
+      echo [INFO] Keeping the current files, but rebasing the local branch onto origin/%DEFAULT_BRANCH%.
+      git branch "bootstrap-local-backup" HEAD >nul 2>&1
+      git reset --mixed "origin/%DEFAULT_BRANCH%"
+      if errorlevel 1 goto :git_error
+    ) else (
+      git merge-base --is-ancestor "origin/%DEFAULT_BRANCH%" HEAD >nul 2>&1
+      if errorlevel 1 (
+        echo [INFO] Remote has commits that are not in this extracted folder.
+        echo [INFO] Keeping the current files and using origin/%DEFAULT_BRANCH% as the update base.
+        git branch "bootstrap-local-backup" HEAD >nul 2>&1
+        git reset --mixed "origin/%DEFAULT_BRANCH%"
+        if errorlevel 1 goto :git_error
+      ) else (
+        echo [OK] Local history already contains origin/%DEFAULT_BRANCH%.
+      )
+    )
+  )
+  git branch -M "%DEFAULT_BRANCH%" >nul 2>&1
+) else (
+  echo [OK] Remote %DEFAULT_BRANCH% does not exist yet. Initial push will be used.
+)
+
+echo.
 echo [CHECK] Commit
 git add -A
 if errorlevel 1 goto :git_error
@@ -197,8 +242,11 @@ echo.
 echo [CHECK] Push main branch
 git push -u origin "%DEFAULT_BRANCH%"
 if errorlevel 1 (
-  echo [ERROR] Push failed.
-  echo         Try: git push -u origin %DEFAULT_BRANCH%
+  echo [ERROR] Push failed even after remote synchronization.
+  echo [INFO] Run these diagnostics and share the output if it still fails:
+  echo        git status
+  echo        git log --oneline --decorate -5
+  echo        git log --oneline origin/%DEFAULT_BRANCH% -5
   goto :fatal
 )
 echo [OK] Source uploaded to GitHub.

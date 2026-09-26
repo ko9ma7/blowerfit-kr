@@ -27,3 +27,24 @@ test('app exposes at least five engineering selection tabs', async () => {
   const expected = ['flow','pressure','openings','airknife','duct','vacuum','application']
   for (const tab of expected) assert.ok(app.includes(`['${tab}'`), tab)
 })
+
+test('report export controls are reachable from the top menu', async () => {
+  const app = await readFile(path.join(root, 'web/app.js'), 'utf8')
+  for (const token of ['결과 / 저장 ▾','report-settings','scroll-candidates','export-pdf','export-png']) {
+    assert.ok(app.includes(token), token)
+  }
+})
+
+test('quick input mode hides engineering detail behind advanced sections', async () => {
+  const app = await readFile(path.join(root, 'web/app.js'), 'utf8')
+  for (const token of ['QUICK ENGINEERING INPUT','필수값 우선','상세 배관 · 손실 설정','essential-grid']) {
+    assert.ok(app.includes(token), token)
+  }
+})
+
+test('report defaults keep formulas optional to avoid dense output', async () => {
+  const app = await readFile(path.join(root, 'web/app.js'), 'utf8')
+  assert.ok(app.includes('formulas:false'))
+  assert.ok(app.includes('report-formula-cards'))
+  assert.ok(app.includes('makeReportCanvases'))
+})
